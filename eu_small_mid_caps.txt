@@ -1,0 +1,656 @@
+# FORMAT: TICKER|COMPANY_NAME|SECTOR|INDEX_COUNTRY
+# --- ITALIA: BORSA ITALIANA (FTSE Italia Mid Cap, STAR, Small Cap) ---
+BGN.MI|Banca Generali|Financials|IT_MID
+IF.MI|Banca Ifis|Financials|IT_MID
+BDB.MI|Banco di Desio e della Brianza|Financials|IT_MID
+BFG.MI|B.F. SpA|Consumer Staples|IT_MID
+DLG.MI|De' Longhi|Consumer Discretionary|IT_MID
+IP.MI|Interpump Group|Industrials|IT_MID
+REY.MI|Reply SpA|Technology|IT_MID
+SOL.MI|SOL SpA|Chemicals|IT_MID
+MAIRE.MI|Maire Tecnimont|Energy Engineering|IT_MID
+IRE.MI|Iren SpA|Utilities|IT_MID
+TGYM.MI|Technogym|Consumer Discretionary|IT_MID
+CRL.MI|Carel Industries|Industrials|IT_MID
+FCT.MI|Fincantieri|Industrials Defense|IT_MID
+AVI.MI|Avio SpA|Aerospace Defense|IT_STAR
+TPRO.MI|Technoprobe|Semiconductors|IT_MID
+LTMC.MI|Lottomatica Group|Consumer Services|IT_MID
+ACE.MI|Acea SpA|Utilities|IT_MID
+ARN.MI|Alerion Clean Power|Renewable Energy|IT_MID
+ANIM.MI|Anima Holding|Financials|IT_MID
+ASC.MI|Ascopiave|Utilities|IT_STAR
+MN.MI|Arnoldo Mondadori Editore|Media|IT_STAR
+BFF.MI|BFF Bank|Financials|IT_MID
+BRE.MI|Brembo|Automotive Parts|IT_MID
+BZU.MI|Buzzi SpA|Construction Materials|IT_MID
+CEM.MI|Cementir Holding|Construction Materials|IT_STAR
+CE.MI|Credito Emiliano|Financials|IT_MID
+CIR.MI|CIR Compagnie Industriali Riunite|Holding|IT_STAR
+CLI.MI|Centrale del Latte d'Italia|Consumer Staples|IT_STAR
+COM.MI|Comer Industries|Industrials|IT_MID
+DAN.MI|Danieli & C|Industrial Metals|IT_MID
+DAL.MI|Datalogic|Technology Hardware|IT_STAR
+ELN.MI|El.En. SpA|Medical Equipment|IT_STAR
+ENAV.MI|ENAV SpA|Transportation Infrastructure|IT_MID
+ERG.MI|ERG SpA|Renewable Energy|IT_MID
+PRT.MI|Esprinet|Technology Distribution|IT_STAR
+FILA.MI|F.I.L.A. Group|Consumer Goods|IT_STAR
+GVS.MI|GVS SpA|Medical Filtration|IT_MID
+ILTY.MI|illimity Bank|Financials|IT_STAR
+JUVE.MI|Juventus Football Club|Leisure Entertainment|IT_MID
+MARR.MI|MARR SpA|Food Distribution|IT_STAR
+MOL.MI|Moltiply Group|Fintech Services|IT_STAR
+NWL.MI|Newlat Food|Consumer Staples|IT_STAR
+OVS.MI|OVS SpA|Apparel Retail|IT_MID
+PIA.MI|Piaggio & C|Automotive|IT_MID
+PHN.MI|Pharmanutra|Healthcare|IT_STAR
+RWAY.MI|Rai Way|Telecommunications Infrastructure|IT_MID
+WBD.MI|Webuild|Construction Engineering|IT_MID
+SFER.MI|Salvatore Ferragamo|Luxury Goods|IT_MID
+SES.MI|Sesa SpA|IT Services|IT_STAR
+TIP.MI|Tamburi Investment Partners|Financials|IT_STAR
+TISG.MI|The Italian Sea Group|Luxury Yachts|IT_STAR
+TXT.MI|TXT e-solutions|Software|IT_STAR
+WIIT.MI|WIIT SpA|Cloud Computing|IT_STAR
+ZV.MI|Zignago Vetro|Packaging|IT_STAR
+SECO.MI|SECO SpA|IoT Embedded Systems|IT_STAR
+LUVE.MI|LU-VE Group|Industrial HVAC|IT_STAR
+BSS.MI|Biesse SpA|Industrial Machinery|IT_STAR
+SAB.MI|Sabaf SpA|Household Components|IT_STAR
+GE.MI|Gefran|Industrial Automation|IT_STAR
+SO.MI|Sogefi|Automotive Parts|IT_STAR
+TNXT.MI|Tinexta|Digital Trust Cybersecurity|IT_STAR
+EGLA.MI|Eurogroup Laminations|EV Motors Components|IT_MID
+DGV.MI|Digital Value|IT Infrastructure|IT_STAR
+GHC.MI|Garofalo Health Care|Healthcare Facilities|IT_STAR
+SL.MI|Sanlorenzo|Luxury Yachts|IT_STAR
+YACHT.MI|Ferretti Group|Luxury Yachts|IT_MID
+ARIS.MI|Ariston Holding|Thermal Comfort|IT_MID
+RCS.MI|RCS MediaGroup|Publishing Media|IT_SMALL
+CAI.MI|Cairo Communication|Media|IT_STAR
+DIS.MI|d'Amico International Shipping|Marine Shipping|IT_STAR
+FM.MI|Fiera Milano|Event Services|IT_STAR
+GEO.MI|Geox SpA|Footwear Retail|IT_SMALL
+SFL.MI|Safilo Group|Eyewear|IT_SMALL
+TFI.MI|Trevi Finanziaria Industriale|Engineering|IT_SMALL
+BAN.MI|BasicNet|Apparel Licensing|IT_SMALL
+SERI.MI|Seri Industrial|Battery Materials|IT_SMALL
+ORS.MI|Orsero SpA|Food Logistics|IT_STAR
+EQUI.MI|Equita Group|Investment Banking|IT_STAR
+UD.MI|Unidata|Telecommunications Fiber|IT_STAR
+CY4.MI|Cy4Gate|Cybersecurity Electronic Warfare|IT_STAR
+AV.MI|Antares Vision|Track and Trace Tech|IT_STAR
+ETH.MI|Eurotech|Edge Computing IoT|IT_STAR
+ECNL.MI|Aquafil|Synthetic Fibers|IT_STAR
+NDT.MI|Neodecortech|Industrial Design Materials|IT_STAR
+GPI.MI|GPI SpA|Healthcare Software|IT_STAR
+SOM.MI|Somec SpA|Naval Glazing Engineering|IT_SMALL
+EM.MI|Emak SpA|Outdoor Power Equipment|IT_STAR
+IRC.MI|Irce SpA|Winding Wires Cables|IT_STAR
+TES.MI|Tesmec|Trencher Rail Tech|IT_STAR
+PINF.MI|Pininfarina|Automotive Design|IT_SMALL
+LR.MI|Landi Renzo|Gas Hydrogen Mobility|IT_SMALL
+CALT.MI|Caltagirone|Cement Construction|IT_MID
+ALTEA.MI|Altea Green Power|Renewable Energy|IT_STAR
+DOX.MI|Doxee SpA|Cloud Customer Communications|IT_SMALL
+FF.MI|Fine Foods & Pharmaceuticals|Contract Manufacturing|IT_STAR
+
+# --- GERMANIA: XETRA (MDAX & SDAX) ---
+LHA.DE|Deutsche Lufthansa|Airlines|DE_MDAX
+TKA.DE|Thyssenkrupp|Industrial Conglomerate|DE_MDAX
+TUI1.DE|TUI AG|Travel Tourism|DE_MDAX
+LXS.DE|Lanxess|Specialty Chemicals|DE_MDAX
+FNTN.DE|freenet AG|Telecommunications|DE_MDAX
+FRA.DE|Fraport|Airport Operator|DE_MDAX
+WCH.DE|Wacker Chemie|Chemicals Polysilicon|DE_MDAX
+KRN.DE|Krones AG|Packaging Machinery|DE_MDAX
+GBF.DE|Bilfinger|Industrial Services|DE_MDAX
+HOT.DE|Hochtief|Construction Engineering|DE_MDAX
+NDX1.DE|Nordex SE|Wind Turbines|DE_MDAX
+NDA.DE|Aurubis|Copper Smelting Recycling|DE_MDAX
+AIXA.DE|Aixtron|Semiconductor Equipment|DE_MDAX
+SDF.DE|K+S AG|Fertilizers Potash|DE_MDAX
+UTDI.DE|United Internet|Internet Telecom|DE_MDAX
+BOSS.DE|Hugo Boss|Apparel Luxury|DE_MDAX
+FPE3.DE|Fuchs SE|Lubricants Chemicals|DE_MDAX
+EVD.DE|CTS Eventim|Ticketing Live Entertainment|DE_MDAX
+JUN3.DE|Jungheinrich|Intralogistics Forklifts|DE_MDAX
+SAX.DE|Stroeer SE|Out of Home Media|DE_MDAX
+TEG.DE|TAG Immobilien|Real Estate|DE_MDAX
+NEM.DE|Nemetschek|Architecture Software|DE_MDAX
+AFX.DE|Carl Zeiss Meditec|Medical Technology|DE_MDAX
+FIE.DE|Fielmann Group|Optical Retail|DE_MDAX
+RAA.DE|Rational AG|Commercial Kitchen Equipment|DE_MDAX
+BC8.DE|Bechtle AG|IT System House|DE_MDAX
+LEG.DE|LEG Immobilien|Residential Real Estate|DE_MDAX
+TLX.DE|Talanx|Insurance|DE_MDAX
+RRTL.DE|RTL Group|Broadcasting Media|DE_MDAX
+EVK.DE|Evonik Industries|Specialty Chemicals|DE_MDAX
+KGX.DE|KION Group|Supply Chain Robotics|DE_MDAX
+HLE.DE|Hella GmbH|Automotive Lighting Electronics|DE_MDAX
+PUM.DE|Puma SE|Sportswear|DE_MDAX
+AT1.DE|Aroundtown|Commercial Real Estate|DE_MDAX
+FTK.DE|flatexDEGIRO|Online Brokerage|DE_MDAX
+RDC.DE|Redcare Pharmacy|Online Pharmacy|DE_MDAX
+DHER.DE|Delivery Hero|Food Delivery Tech|DE_MDAX
+DWS.DE|DWS Group|Asset Management|DE_MDAX
+KBX.DE|Knorr-Bremse|Braking Systems Rail|DE_MDAX
+8TRA.DE|Traton SE|Commercial Vehicles Trucks|DE_MDAX
+TMV.DE|TeamViewer|Remote Connectivity Software|DE_MDAX
+HAG.DE|Hensoldt|Defense Radar Optronics|DE_MDAX
+AG1.DE|AUTO1 Group|Online Automotive Platform|DE_MDAX
+IOS.DE|IONOS Group|Web Hosting Cloud|DE_MDAX
+R3NK.DE|RENK Group|Defense Propulsion Transmissions|DE_MDAX
+SZG.DE|Salzgitter AG|Steel Production|DE_SDAX
+VOS.DE|Vossloh|Rail Infrastructure|DE_SDAX
+DRW3.DE|Draegerwerk|Medical Safety Tech|DE_SDAX
+SZU.DE|Suedzucker|Sugar Bioethanol|DE_SDAX
+HDD.DE|Heidelberger Druckmaschinen|Printing Machinery|DE_SDAX
+DEZ.DE|Deutz AG|Industrial Engines|DE_SDAX
+1U1.DE|1&1 AG|Telecommunications Mobile|DE_SDAX
+SMHN.DE|Suess MicroTec|Semiconductor Equipment|DE_SDAX
+VBK.DE|Verbio SE|Biofuels Renewable Energy|DE_SDAX
+CWC.DE|Cewe Stiftung|Photo Printing Retail|DE_SDAX
+DBAN.DE|Deutsche Beteiligungs|Private Equity|DE_SDAX
+GLJ.DE|Grenke AG|Financial Leasing|DE_SDAX
+HAB.DE|Hamborner REIT|Commercial Real Estate|DE_SDAX
+HBH.DE|Hornbach Holding|DIY Retail|DE_SDAX
+INH.DE|Indus Holding|Industrial SME Holding|DE_SDAX
+KWS.DE|KWS Saat|Agricultural Seeds|DE_SDAX
+NOEJ.DE|Norma Group|Joining Technology|DE_SDAX
+PAT.DE|Patrizia SE|Real Assets Investment|DE_SDAX
+SIX2.DE|Sixt SE|Mobility Car Rental|DE_SDAX
+WAC.DE|Wacker Neuson|Construction Equipment|DE_SDAX
+EVT.DE|Evotec|Biotech Drug Discovery|DE_SDAX
+PSAN.DE|PSI Software|Energy Grid Software|DE_SDAX
+AOF.DE|Atoss Software|Workforce Management Software|DE_SDAX
+COK.DE|Cancom SE|IT Cloud Services|DE_SDAX
+EUZ.DE|Eckert & Ziegler|Isotope Medical Tech|DE_SDAX
+ELG.DE|Elmos Semiconductor|Automotive Semiconductors|DE_SDAX
+GFT.DE|GFT Technologies|Fintech IT Consulting|DE_SDAX
+HYQ.DE|Hypoport|Mortgage Fintech Platform|DE_SDAX
+PNE3.DE|PNE AG|Wind Farm Developer|DE_SDAX
+TPE.DE|PVA TePla|Crystal Growing Systems|DE_SDAX
+YSN.DE|Secunet Security Networks|Cybersecurity Defense IT|DE_SDAX
+F3C.DE|SFC Energy|Fuel Cells Methanol Hydrogen|DE_SDAX
+S92.DE|SMA Solar Technology|Solar Inverters|DE_SDAX
+GXI.DE|Gerresheimer|Pharma Packaging Glass|DE_SDAX
+DEQ.DE|Deutsche EuroShop|Shopping Center REIT|DE_SDAX
+PSM.DE|ProSiebenSat.1 Media|Television Entertainment|DE_SDAX
+ADV.DE|Adtran Networks|Optical Networking Telecom|DE_SDAX
+MLP.DE|MLP SE|Wealth Financial Advisory|DE_SDAX
+JEN.DE|Jenoptik|Photonics Optics|DE_SDAX
+SFQ.DE|SAF-Holland|Commercial Vehicle Axles|DE_SDAX
+DUE.DE|Duerr AG|Paint Shop Robotics Machinery|DE_SDAX
+STM.DE|Stabilus|Gas Springs Motion Control|DE_SDAX
+WAF.DE|Siltronic|Silicon Wafers Semiconductors|DE_SDAX
+PBB.DE|Deutsche Pfandbriefbank|Real Estate Finance|DE_SDAX
+GYC.DE|Grand City Properties|Residential Real Estate|DE_SDAX
+MBB.DE|MBB SE|Industrial Tech Holding|DE_SDAX
+KTN.DE|Kontron AG|IoT Embedded Computing|DE_SDAX
+BVB.DE|Borussia Dortmund|Football Club Sports|DE_SDAX
+ADN1.DE|adesso SE|IT Consulting Software|DE_SDAX
+EKT.DE|Energiekontor|Wind Solar Developer|DE_SDAX
+KSB3.DE|KSB SE|Industrial Pumps Valves|DE_SDAX
+MUX.DE|Mutares|Turnaround Private Equity|DE_SDAX
+STO3.DE|Sto SE|Building Insulation Coatings|DE_SDAX
+WUW.DE|Wuestenrot & Wuerttembergische|Insurance Banking|DE_SDAX
+ILM1.DE|Medios AG|Specialty Pharma|DE_SDAX
+JST.DE|Jost Werke|Truck Coupling Systems|DE_SDAX
+HFG.DE|HelloFresh|Meal Kit Delivery|DE_SDAX
+BFSA.DE|Befesa|Steel Dust Aluminum Recycling|DE_SDAX
+ACT.DE|AlzChem Group|Specialty Chemicals Creatine|DE_SDAX
+DMP.DE|Dermapharm Holding|Branded Pharmaceuticals|DE_SDAX
+NA9.DE|Nagarro|Digital Product Engineering|DE_SDAX
+VH2.DE|Friedrich Vorwerk Group|Hydrogen Gas Grids|DE_SDAX
+TNIE.DE|Tonies SE|Audio Toys Children Tech|DE_SDAX
+1SXP.DE|Schott Pharma|Injectable Pharma Containment|DE_SDAX
+DOU.DE|Douglas AG|Beauty Perfumery Retail|DE_SDAX
+SHA.DE|Schaeffler|Automotive Industrial Bearings|DE_SDAX
+
+# --- FRANCIA: EURONEXT PARIS (CAC Mid 60 & CAC Small) ---
+VK.PA|Vallourec|Tubular Steel Solutions|FR_MID
+MMT.PA|Metropole Television M6|Broadcasting Media|FR_MID
+ERA.PA|Eramet|Mining Nickel Manganese Lithium|FR_MID
+ADP.PA|Aeroports de Paris|Airport Infrastructure|FR_MID
+NK.PA|Imerys|Industrial Minerals|FR_MID
+SESG.PA|SES SA|Satellite Communications|FR_MID
+VIRP.PA|Virbac|Veterinary Pharmaceuticals|FR_MID
+MF.PA|Wendel|Investment Holding|FR_MID
+MERY.PA|Mercialys|Retail REIT|FR_MID
+SK.PA|Groupe SEB|Small Domestic Appliances|FR_MID
+TRI.PA|Trigano|Recreational Vehicles Motorhomes|FR_MID
+SCR.PA|SCOR SE|Reinsurance|FR_MID
+COV.PA|Covivio|Commercial Real Estate|FR_MID
+ETL.PA|Eutelsat Communications|Satellite Operator|FR_MID
+ATO.PA|Atos SE|IT Services Cloud Cyber|FR_MID
+OPM.PA|OPmobility|Automotive Exterior Hydrogen|FR_MID
+NEX.PA|Nexans|High Voltage Cables|FR_MID
+BB.PA|Societe BIC|Stationery Lighters Shavers|FR_MID
+ATE.PA|Alten SA|Engineering R&D Consulting|FR_MID
+VIRI.PA|Viridien|Geoscience Subsurface Imaging|FR_MID
+NXI.PA|Nexity|Real Estate Development|FR_MID
+BEN.PA|Beneteau|Boat Yacht Manufacturing|FR_MID
+MRN.PA|Mersen|Electrical Power Advanced Materials|FR_MID
+IPN.PA|Ipsen|Biopharmaceuticals Oncology|FR_MID
+DEC.PA|JCDecaux|Outdoor Advertising|FR_MID
+TFI.PA|TF1 Group|Television Media|FR_MID
+SOP.PA|Sopra Steria|IT Consulting Software|FR_MID
+RUI.PA|Rubis SCA|Energy Storage Distribution|FR_MID
+ITP.PA|Interparfums|Luxury Fragrances|FR_MID
+LSS.PA|Lectra|Industrial Cutting CAD Software|FR_MID
+DBG.PA|Derichebourg|Metal Recycling Environmental|FR_MID
+ICAD.PA|Icade|Healthcare Office REIT|FR_MID
+BOL.PA|Bollore|Logistics Energy Holding|FR_MID
+ARG.PA|Argan|Logistics Warehouses REIT|FR_MID
+CARM.PA|Carmila|Shopping Centers REIT|FR_MID
+AM.PA|Dassault Aviation|Fighter Jets Business Aircraft|FR_MID
+VU.PA|VusionGroup|Smart Electronic Shelf Labels|FR_MID
+VLA.PA|Valneva|Specialty Vaccines Biotech|FR_MID
+CLARI.PA|Clariane|Care Homes Healthcare|FR_MID
+RF.PA|Eurazeo|Private Equity Asset Management|FR_MID
+IDL.PA|ID Logistics|Contract Logistics|FR_MID
+FNAC.PA|Fnac Darty|Electronics Appliances Retail|FR_MID
+SPIE.PA|Spie SA|Multi-technical Energy Services|FR_MID
+S30.PA|Solutions 30|Digital Telecom Field Services|FR_MID
+COFA.PA|Coface|Trade Credit Insurance|FR_MID
+GTT.PA|Gaztransport & Technigaz|LNG Membrane Containment|FR_MID
+ELIOR.PA|Elior Group|Contract Catering Services|FR_MID
+ELIS.PA|Elis SA|Textile Hygiene Facility Services|FR_MID
+VLTSA.PA|Voltalia|Renewable Energy Producer|FR_MID
+AMUN.PA|Amundi|Asset Management|FR_MID
+XFAB.PA|X-Fab Silicon Foundries|Analog Mixed-Signal Foundry|FR_MID
+AYV.PA|Ayvens|Fleet Leasing Mobility|FR_MID
+VRLA.PA|Verallia|Glass Packaging Beverages|FR_MID
+FDJ.PA|La Francaise des Jeux|Gaming Lottery|FR_MID
+TE.PA|Technip Energies|LNG Hydrogen Engineering|FR_MID
+EAPI.PA|Euroapi|Active Pharmaceutical Ingredients|FR_MID
+SOI.PA|Soitec|Engineered Semiconductor Substrates|FR_MID
+RCO.PA|Remy Cointreau|Spirits Cognac|FR_MID
+UBI.PA|Ubisoft Entertainment|Video Games Publishing|FR_MID
+WLN.PA|Worldline|Payment Processing Fintech|FR_MID
+FR.PA|Valeo|Automotive Suppliers ADAS|FR_MID
+FRVIA.PA|Forvia|Automotive Seating Interiors|FR_MID
+AF.PA|Air France-KLM|Airlines Aviation|FR_MID
+OVH.PA|OVHcloud|Cloud Infrastructure Hosting|FR_SMALL
+PLNW.PA|Planisware|B2B Project SaaS Software|FR_MID
+BLV.PA|Believe|Digital Music Distribution|FR_SMALL
+ALESK.PA|Esker|AI Process Automation SaaS|FR_SMALL
+EQP.PA|Equasens|Pharmacy Healthcare Software|FR_SMALL
+AUB.PA|Aubay|IT Digital Consulting|FR_SMALL
+WAVE.PA|Wavestone|Management Cybersecurity Consulting|FR_SMALL
+ASY.PA|Assystem|Nuclear Engineering Services|FR_SMALL
+QDT.PA|Quadient|Mail Parcel Lockers Software|FR_SMALL
+MTU.PA|Manitou BF|Rough Terrain Handling Equipment|FR_SMALL
+PIG.PA|Haulotte Group|Aerial Work Platforms|FR_SMALL
+FII.PA|Lisi SA|Aerospace Automotive Fasteners|FR_SMALL
+FGA.PA|Figeac Aero|Aerospace Subcontracting|FR_SMALL
+SCHP.PA|Seche Environnement|Hazardous Waste Management|FR_SMALL
+BON.PA|Bonduelle|Processed Vegetables Food|FR_SMALL
+SAVE.PA|Savencia|Cheese Dairy Products|FR_SMALL
+BOI.PA|Boiron|Homeopathic Medicines|FR_SMALL
+GBT.PA|Guerbet|Medical Imaging Contrast Media|FR_SMALL
+MDM.PA|Maisons du Monde|Home Furniture Retail|FR_SMALL
+SMCP.PA|SMCP|Accessible Luxury Fashion|FR_SMALL
+KOF.PA|Kaufman & Broad|Residential Construction|FR_SMALL
+ALTA.PA|Altarea|Urban Real Estate Developer|FR_MID
+
+# --- REGNO UNITO: LONDON STOCK EXCHANGE (FTSE 250 & SmallCap) ---
+GNS.L|Genus plc|Animal Genetics Biotech|UK_FTSE250
+PFD.L|Premier Foods|Branded Ambient Foods|UK_FTSE250
+MGNS.L|Morgan Sindall Group|Construction Regeneration|UK_FTSE250
+HOC.L|Hochschild Mining|Gold Silver Mining|UK_FTSE250
+BWY.L|Bellway|Residential Housebuilder|UK_FTSE250
+VCT.L|Victrex|High Performance Polymers|UK_FTSE250
+ABDN.L|abrdn plc|Asset Wealth Management|UK_FTSE250
+BBY.L|Balfour Beatty|Infrastructure Construction|UK_FTSE250
+INVP.L|Investec|Specialist Banking Wealth|UK_FTSE250
+JMAT.L|Johnson Matthey|Catalysts Hydrogen Platinum Tech|UK_FTSE250
+BRBY.L|Burberry Group|Luxury Fashion Apparel|UK_FTSE250
+SMWH.L|WH Smith|Travel Retail Books|UK_FTSE250
+HMSO.L|Hammerson|Urban Retail REIT|UK_FTSE250
+JDW.L|J D Wetherspoon|Pubs Hospitality|UK_FTSE250
+SRP.L|Serco Group|Public Services Defense Outsourcing|UK_FTSE250
+EMG.L|Man Group|Quantitative Hedge Fund Manager|UK_FTSE250
+TCAP.L|TP ICAP Group|Interdealer Broker Market Data|UK_FTSE250
+PNN.L|Pennon Group|Water Utilities|UK_FTSE250
+TATE.L|Tate & Lyle|Specialty Food Ingredients|UK_FTSE250
+VTY.L|Vistry Group|Partnerships Housebuilding|UK_FTSE250
+QQ.L|QinetiQ Group|Defense Security Engineering|UK_FTSE250
+GPE.L|Great Portland Estates|Central London Office REIT|UK_FTSE250
+PAGE.L|PageGroup|Professional Recruitment|UK_FTSE250
+BLND.L|British Land|Commercial Property REIT|UK_FTSE250
+ASHM.L|Ashmore Group|Emerging Markets Asset Management|UK_FTSE250
+TPK.L|Travis Perkins|Builders Merchant Materials|UK_FTSE250
+VSVS.L|Vesuvius|Molten Metal Flow Engineering|UK_FTSE250
+IGG.L|IG Group Holdings|Online Trading Derivatives|UK_FTSE250
+DRX.L|Drax Group|Biomass Power Generation|UK_FTSE250
+BAB.L|Babcock International|Aerospace Defense Nuclear Engineering|UK_FTSE250
+MAB.L|Mitchells & Butlers|Restaurants Pubs Operator|UK_FTSE250
+MTO.L|Mitie Group|Facilities Management|UK_FTSE250
+ROR.L|Rotork|Industrial Flow Control Actuators|UK_FTSE250
+FGP.L|FirstGroup|Bus Rail Public Transport|UK_FTSE250
+KIE.L|Kier Group|Infrastructure Construction|UK_FTSE250
+HBR.L|Harbour Energy|Oil Gas Exploration Production|UK_FTSE250
+INCH.L|Inchcape|Automotive Distribution|UK_FTSE250
+HTG.L|Hunting plc|Precision Energy Engineering|UK_FTSE250
+ITV.L|ITV plc|Television Broadcasting Studios|UK_FTSE250
+HAS.L|Hays plc|Specialist Recruitment|UK_FTSE250
+SVS.L|Savills|Real Estate Advisory|UK_FTSE250
+CCC.L|Computacenter|Corporate IT Infrastructure|UK_FTSE250
+IWG.L|International Workplace Group|Flexible Workspace Regus|UK_FTSE250
+PZC.L|PZ Cussons|Personal Care Consumer Goods|UK_FTSE250
+KLR.L|Keller Group|Geotechnical Specialist Contractor|UK_FTSE250
+SAFE.L|Safestore Holdings|Self Storage REIT|UK_FTSE250
+CHG.L|Chemring Group|Defense Countermeasures Sensors|UK_FTSE250
+ESNT.L|Essentra|Industrial Components Hardware|UK_FTSE250
+BYG.L|Big Yellow Group|Self Storage REIT|UK_FTSE250
+RSW.L|Renishaw|Precision Metrology Spectroscopy|UK_FTSE250
+BOY.L|Bodycote|Thermal Processing Metallurgy|UK_FTSE250
+GRG.L|Greggs|Bakery Food on the Go Retail|UK_FTSE250
+MONY.L|Mony Group|Price Comparison Fintech|UK_FTSE250
+STEM.L|SThree|STEM Specialist Staffing|UK_FTSE250
+MSLH.L|Marshalls|Hard Landscaping Building Materials|UK_FTSE250
+GRI.L|Grainger plc|Residential Rental REIT|UK_FTSE250
+DLN.L|Derwent London|Office Real Estate REIT|UK_FTSE250
+WKP.L|Workspace Group|Flexible Office REIT|UK_FTSE250
+CCR.L|C&C Group|Cider Beer Drinks Distribution|UK_FTSE250
+RAT.L|Rathbones Group|Wealth Investment Management|UK_FTSE250
+ZIG.L|ZIGUP|Commercial Vehicle Van Hire|UK_FTSE250
+DOM.L|Domino's Pizza Group|Quick Service Pizza Franchise|UK_FTSE250
+PTEC.L|Playtech|Gambling Software Technology|UK_FTSE250
+PAG.L|Paragon Banking Group|Specialist Buy-to-Let Lender|UK_FTSE250
+BAG.L|A.G. Barr|Soft Drinks Irn-Bru|UK_FTSE250
+SHC.L|Shaftesbury Capital|West End London Retail REIT|UK_FTSE250
+CURY.L|Currys plc|Electrical Electronics Retailer|UK_FTSE250
+CWK.L|Cranswick|Fresh Pork Gourmet Food|UK_FTSE250
+DNLM.L|Dunelm Group|Homewares Furnishings Retail|UK_FTSE250
+ELM.L|Elementis|Specialty Chemicals Additives|UK_FTSE250
+JUP.L|Jupiter Fund Management|Active Fund Management|UK_FTSE250
+LRE.L|Lancashire Holdings|Specialty Property Reinsurance|UK_FTSE250
+FOUR.L|4imprint Group|Promotional Products Marketing|UK_FTSE250
+AJB.L|AJ Bell|Investment Platform Stockbroker|UK_FTSE250
+ALFA.L|Alfa Financial Software|Asset Finance Enterprise Software|UK_FTSE250
+AO.L|AO World|Online Electricals Retailer|UK_FTSE250
+ASC.L|ASOS plc|Online Fast Fashion Retail|UK_FTSE250
+ATYM.L|Atalaya Mining|Copper Mining Europe|UK_FTSE250
+ATG.L|Auction Technology Group|Online Auction Marketplaces|UK_FTSE250
+AVON.L|Avon Technologies|Military Respiratory Ballistic Protection|UK_FTSE250
+BME.L|B&M European Value Retail|Variety Discount Stores|UK_FTSE250
+BMY.L|Bloomsbury Publishing|Book Academic Publishing|UK_FTSE250
+BREE.L|Breedon Group|Aggregates Cement Asphalt|UK_FTSE250
+BPT.L|Bridgepoint Group|Middle Market Private Assets|UK_FTSE250
+BYIT.L|Bytes Technology Group|Enterprise Software Cloud Reseller|UK_FTSE250
+CWR.L|Ceres Power Holdings|Solid Oxide Fuel Cells Electrolysers|UK_FTSE250
+CSN.L|Chesnara|Life Pensions Consolidator|UK_FTSE250
+CKN.L|Clarkson plc|Shipping Brokerage Maritime Data|UK_FTSE250
+CBG.L|Close Brothers Group|Merchant Banking Lending|UK_FTSE250
+CMCX.L|CMC Markets|Online CFD Spread Betting|UK_FTSE250
+COA.L|Coats Group|Industrial Threads Footwear Components|UK_FTSE250
+COST.L|Costain Group|Smart Infrastructure Engineering|UK_FTSE250
+CVSG.L|CVS Group|Veterinary Practices Services|UK_FTSE250
+DSCV.L|discoverIE Group|Customized Industrial Electronics|UK_FTSE250
+DOCS.L|Dr. Martens|Iconic Footwear Brand|UK_FTSE250
+ENOG.L|Energean|Mediterranean Gas Exploration|UK_FTSE250
+AML.L|Aston Martin Lagonda|Ultra-Luxury Sports Cars|UK_FTSE250
+OCDO.L|Ocado Group|Automated Grocery Warehouse Robotics|UK_FTSE250
+PETS.L|Pets at Home Group|Pet Care Retail Veterinary|UK_FTSE250
+SXS.L|Spectris|Precision Test Measurement Instruments|UK_FTSE250
+TRN.L|Trainline|Rail Coach Ticketing Platform|UK_FTSE250
+WOSG.L|Watches of Switzerland Group|Luxury Watch Jewellery Retailer|UK_FTSE250
+WIZZ.L|Wizz Air Holdings|Low-Cost Airline Aviation|UK_FTSE250
+SCT.L|Softcat|IT Infrastructure Solutions|UK_FTSE250
+KNOS.L|Kainos Group|Digital Transformation Workday IT|UK_FTSE250
+OXIG.L|Oxford Instruments|High-Tech Scientific Equipment|UK_FTSE250
+
+# --- BENELUX, SPAGNA, SVIZZERA, AUSTRIA (AMX, BEL Mid, IBEX Medium/Small, SMIM, ATX) ---
+LIGHT.AS|Signify NV|Connected LED Lighting|NL_AMX
+SBMO.AS|SBM Offshore|FPSO Deepwater Floating Energy|NL_AMX
+FUGR.AS|Fugro NV|Geo-data Offshore Surveying|NL_AMX
+VPK.AS|Koninklijke Vopak|Tank Terminal Chemical Storage|NL_AMX
+BFIT.AS|Basic-Fit|Fitness Club Chain|NL_AMX
+TWEKA.AS|TKH Group|Smart Vision Tire Manufacturing Tech|NL_AMX
+AMG.AS|AMG Critical Materials|Lithium Vanadium Metallurgy|NL_AMX
+AALB.AS|Aalberts NV|Mission Critical Hydronics Industrial|NL_AMX
+CRBN.AS|Corbion|Lactic Acid Biobased Food Ingredients|NL_AMX
+ARCAD.AS|Arcadis|Global Design Engineering Consultancy|NL_AMX
+BAMNB.AS|Koninklijke BAM Groep|Civil Construction Property|NL_AMX
+HEIJM.AS|Heijmans|Infrastructure Building Construction|NL_SMALL
+PNL.AS|PostNL|Mail Parcel E-commerce Logistics|NL_AMX
+TOM2.AS|TomTom|Location Mapping Navigation Tech|NL_SMALL
+ALFEN.AS|Alfen NV|Smart Grids EV Charging Energy Storage|NL_AMX
+TKWY.AS|Just Eat Takeaway|Online Food Delivery Marketplace|NL_AMX
+GLPG.AS|Galapagos NV|Biotechnology Cell Therapy|NL_AMX
+FLOW.AS|Flow Traders|ETP Market Maker Liquidity Provider|NL_AMX
+VLK.AS|Van Lanschot Kempen|Private Banking Wealth Management|NL_AMX
+PHARM.AS|Pharming Group|Rare Disease Biopharmaceuticals|NL_SMALL
+WDP.BR|Warehouses De Pauw|Logistics Real Estate REIT|BE_MID
+FAGR.BR|Fagron|Pharmaceutical Compounding|BE_MID
+BPOST.BR|bpost SA|Postal E-commerce Logistics|BE_MID
+COFB.BR|Cofinimmo|Healthcare Real Estate REIT|BE_MID
+MELE.BR|Melexis|Automotive Microelectronic Sensors|BE_MID
+BAR.BR|Barco NV|Visualization Laser Projection Tech|BE_MID
+DEME.BR|DEME Group|Offshore Wind Dredging Marine|BE_MID
+KIN.BR|Kinepolis Group|Cinema Operator Entertainment|BE_MID
+AZE.BR|Azelis Group|Specialty Chemicals Food Ingredients|BE_MID
+REC.BR|Recticel|Acoustic Thermal Insulation|BE_SMALL
+ECONB.BR|Econocom Group|Digital Workplace IT Leasing|BE_SMALL
+IBAB.BR|Ion Beam Applications IBA|Proton Therapy Cancer Tech|BE_SMALL
+EVS.BR|EVS Broadcast Equipment|Live Video Production Tech|BE_SMALL
+ONTEX.BR|Ontex Group|Personal Hygiene Baby Care|BE_SMALL
+TESB.BR|Tessenderlo Group|Agro Bio-valorization Industrial|BE_MID
+BEKB.BR|Bekaert|Steel Wire Transformation Coatings|BE_MID
+VIS.MC|Viscofan|Meat Casings Food Packaging|ES_MID
+EBRO.MC|Ebro Foods|Rice Pasta Food Group|ES_MID
+VID.MC|Vidrala|Glass Containers Packaging|ES_MID
+CIE.MC|CIE Automotive|Automotive Metal Plastic Components|ES_MID
+ALM.MC|Almirall|Medical Dermatology Pharma|ES_MID
+FAE.MC|Faes Farma|Pharmaceuticals Animal Nutrition|ES_MID
+CAF.MC|Construcciones y Auxiliar de Ferrocarriles|Rolling Stock Trains Buses|ES_MID
+ENO.MC|Elecnor|Infrastructure Renewable Concessions|ES_MID
+TUB.MC|Tubacex|Seamless Stainless Steel Tubes|ES_SMALL
+TRE.MC|Tecnicas Reunidas|Oil Gas Refining Engineering|ES_MID
+SCYR.MC|Sacyr|Toll Roads Concessions Engineering|ES_MID
+MEL.MC|Melia Hotels International|Resort Urban Hotel Chain|ES_MID
+A3M.MC|Atresmedia|Television Radio Media|ES_MID
+LDA.MC|Linea Directa Aseguradora|Direct Motor Home Insurance|ES_MID
+GCO.MC|Grupo Catalana Occidente|Multi-line Credit Insurance|ES_MID
+ENC.MC|Ence Energia y Celulosa|Eucalyptus Pulp Biomass Energy|ES_MID
+GRE.MC|Grenergy Renovables|Solar PV Battery Storage IPP|ES_MID
+ADX.MC|Audax Renovables|Green Energy Retail Generation|ES_SMALL
+TLGO.MC|Talgo|High Speed Trains Maintenance|ES_SMALL
+PHM.MC|PharmaMar|Marine-derived Oncology Biotech|ES_SMALL
+ROVI.MC|Laboratorios Farmaceuticos Rovi|Heparins Contract Injectable Manufacturing|ES_MID
+RJF.MC|Laboratorio Reig Jofre|Antibiotics Injectable Dermatology|ES_SMALL
+NEA.MC|Nicolas Correa|Industrial Milling Machines|ES_SMALL
+PSG.MC|Prosegur|Cash Logistics Private Security|ES_MID
+DOM.MC|Global Dominion Access|B2B Industrial Digital Services|ES_SMALL
+GEST.MC|Gestamp Automocion|Automotive Metal Body Structures|ES_MID
+HOME.MC|Neinor Homes|Residential Real Estate Developer|ES_MID
+MVC.MC|Metrovacesa|Land Residential Development|ES_SMALL
+DIA.MC|Distribuidora Internacional de Alimentacion|Proximity Supermarkets Retail|ES_SMALL
+OLE.MC|Deoleo|Olive Oil Branded Producer|ES_SMALL
+RBI.VI|Raiffeisen Bank International|Central Eastern Europe Banking|AT_MID
+VOE.VI|voestalpine|High-performance Steel Railway Systems|AT_MID
+WIE.VI|Wienerberger|Clay Bricks Piping Building Materials|AT_MID
+ANDR.VI|Andritz AG|Hydro Pulp Paper Metal Machinery|AT_MID
+BG.VI|BAWAG Group|Retail Commercial Banking|AT_MID
+DOC.VI|DO & CO|Airline Event Gourmet Catering|AT_MID
+LNZ.VI|Lenzing AG|Wood-based Specialty Cellulose Fibers|AT_MID
+MMK.VI|Mayr-Melnhof Karton|Cartonboard Folding Cartons|AT_MID
+POST.VI|Oesterreichische Post|Mail Parcel Logistics Austria|AT_MID
+PAL.VI|Palfinger|Hydraulic Lifting Loader Cranes|AT_SMALL
+POS.VI|PORR AG|Civil Infrastructure Construction|AT_SMALL
+SBO.VI|Schoeller-Bleckmann Oilfield|Directional Drilling High-Precision|AT_SMALL
+SEM.VI|Semperit|Industrial Elastomer Hose Profiles|AT_SMALL
+STR.VI|Strabag|European Transportation Construction|AT_MID
+UQA.VI|UNIQA Insurance Group|Health Property Life Insurance|AT_MID
+ZAG.VI|Zumtobel Group|Professional Architectural Lighting|AT_SMALL
+BALN.SW|Baloise Holding|Swiss Insurance Asset Management|CH_SMIM
+HELN.SW|Helvetia Holding|Multi-line Swiss European Insurance|CH_SMIM
+ADEN.SW|Adecco Group|Global Workforce HR Solutions|CH_SMIM
+BARN.SW|Barry Callebaut|B2B Cocoa Chocolate Products|CH_SMIM
+CLN.SW|Clariant|Catalysts Adsorbents Specialty Chemicals|CH_SMIM
+GF.SW|Georg Fischer|Piping Flow Solutions Lightweight Casting|CH_SMIM
+FHZN.SW|Flughafen Zuerich|Zurich Airport Operator|CH_SMIM
+TEMN.SW|Temenos|Core Banking Cloud Software|CH_SMIM
+AMS.SW|ams-OSRAM|Optical Sensors Emitters Automotive Lamps|CH_SMIM
+BEAN.SW|Belimo Holding|HVAC Damper Actuators Control Valves|CH_SMIM
+BUCN.SW|Bucher Industries|Agricultural Municipal Glass Machinery|CH_SMIM
+BCHN.SW|Burckhardt Compression|Reciprocating Gas Hydrogen Compressors|CH_MID
+CMBN.SW|Cembra Money Bank|Consumer Auto Finance Credit Cards|CH_MID
+COTN.SW|Comet Holding|RF Plasma Control X-Ray Semiconductor|CH_MID
+DKSH.SW|DKSH Holding|Market Expansion Services Asia|CH_SMIM
+DOKA.SW|dormakaba Holding|Access Control Security Locks|CH_MID
+AVOL.SW|Avolta AG|Travel Retail Airport Duty Free|CH_SMIM
+EMMN.SW|Emmi AG|Premium Swiss Dairy Cheese|CH_MID
+FORN.SW|Forbo Holding|Flooring Adhesives Conveyor Belts|CH_MID
+GALE.SW|Galenica|Swiss Pharmacy Network Healthcare Logistics|CH_SMIM
+HUBN.SW|Huber+Suhner|Optical RF High-Voltage Connectivity|CH_MID
+IFCN.SW|INFICON Holding|Vacuum Instrumentation Semiconductor Gas Leak|CH_MID
+INRN.SW|Interroll Holding|Material Handling Rollers Conveyors|CH_MID
+KARN.SW|Kardex Holding|Automated Storage Retrieval Intralogistics|CH_MID
+KOMN.SW|Komax Holding|Automated Wire Processing Automotive|CH_MID
+LAND.SW|Landis+Gyr Group|Smart Metering Grid Edge Intelligence|CH_MID
+MOBN.SW|Mobimo Holding|Swiss Commercial Residential Real Estate|CH_MID
+OERL.SW|OC Oerlikon|Surface Solutions Polymer Processing|CH_MID
+PSPN.SW|PSP Swiss Property|Prime Swiss Office Retail REIT|CH_SMIM
+SFZN.SW|Siegfried Holding|CDMO Pharmaceutical Drug Substances|CH_MID
+SIGN.SW|SIG Group|Aseptic Carton Beverage Packaging|CH_SMIM
+SWON.SW|SoftwareOne Holding|Cloud Software Licensing FinOps|CH_MID
+SRAIL.SW|Stadler Rail|Regional Trains Trams Signalling|CH_MID
+SUN.SW|Sulzer AG|Fluid Engineering Chemtech Pumps|CH_MID
+TECN.SW|Tecan Group|Automated Laboratory Liquid Handling|CH_SMIM
+UBXN.SW|u-blox Holding|GNSS Positioning Cellular IoT Chips|CH_SMALL
+YPSN.SW|Ypsomed Holding|Auto-injectors Insulin Infusion Systems|CH_MID
+DOCM.SW|DocMorris|Online Pharmacy Digital Health|CH_SMALL
+
+# --- NORDICS: SVEZIA, DANIMARCA, FINLANDIA, NORVEGIA (OMX Mid/Small, OBX) ---
+SINCH.ST|Sinch AB|Cloud Communications CPaaS Messaging|SE_MID
+EMBRAC-B.ST|Embracer Group|PC Console Mobile Video Games|SE_MID
+PDX.ST|Paradox Interactive|Strategy Management Video Games|SE_MID
+MYCR.ST|Mycronic|Photomask Laser Writers Electronics Assembly|SE_MID
+HMS.ST|HMS Networks|Industrial ICT Automation Communication|SE_MID
+MTRS.ST|Munters Group|Data Center Battery Climate Dehumidification|SE_MID
+VITR.ST|Vitrolife|IVF Reproductive Genetic Medical Devices|SE_MID
+SECT-B.ST|Sectra|Medical Imaging PACS Cybersecurity|SE_MID
+THULE.ST|Thule Group|Outdoor Bike Racks Roof Boxes|SE_MID
+AAK.ST|AAK AB|Plant-based Specialty Oils Fats|SE_MID
+CAST.ST|Castellum|Nordic Commercial Office Logistics REIT|SE_MID
+FABG.ST|Fabege|Stockholm Office Real Estate|SE_MID
+LOOMIS.ST|Loomis AB|Cash Handling Automated Safes Payment|SE_MID
+PEAB-B.ST|Peab AB|Nordic Civil Building Construction|SE_MID
+SWEC-B.ST|Sweco AB|Architecture Environmental Engineering|SE_MID
+TREL-B.ST|Trelleborg|Engineered Polymer Sealing Solutions|SE_MID
+WALL-B.ST|Wallenstam|Residential Commercial Property Sweden|SE_MID
+WIHL.ST|Wihlborgs Fastigheter|Oresund Commercial Real Estate|SE_MID
+AFRY.ST|AFRY AB|Industrial Energy Infrastructure Consulting|SE_MID
+ARJO-B.ST|Arjo AB|Acute Long-Term Care Medical Mobility|SE_MID
+AZA.ST|Avanza Bank Holding|Digital Savings Online Brokerage|SE_MID
+BETS-B.ST|Betsson|Online Casino Sportsbook iGaming|SE_MID
+BILI-A.ST|Bilia AB|Full-service Car Dealerships Service|SE_MID
+BIOG-B.ST|BioGaia|Probiotic Health Supplements|SE_MID
+BRAV.ST|Bravida Holding|Technical Building Installation HVAC|SE_MID
+BUFAB.ST|Bufab AB|C-Parts Fasteners Supply Chain|SE_MID
+CATE.ST|Catena AB|E-commerce Cold Storage Logistics REIT|SE_MID
+CLAS-B.ST|Clas Ohlson|Hardware Home DIY Retail|SE_SMALL
+CLA-B.ST|Cloetta|Confectionery Chocolate Pastilles|SE_SMALL
+COOR.ST|Coor Service Management|Integrated Facility Services Nordics|SE_SMALL
+DIOS.ST|Dios Fastigheter|Northern Sweden Commercial Property|SE_SMALL
+DOM.ST|Dometic Group|Mobile Living RV Marine Cooling|SE_MID
+EPRO-B.ST|Electrolux Professional|Commercial Food Beverage Laundry Equipment|SE_MID
+EKTA-B.ST|Elekta|Precision Radiation Therapy Oncology|SE_MID
+FAG.ST|Fagerhult Group|Professional LED Lighting Solutions|SE_MID
+GRNG.ST|Graenges|Rolled Aluminum Heat Exchanger Battery|SE_MID
+HEM.ST|Hemnet Group|Swedish Residential Property Portal|SE_MID
+HTRO.ST|Hexatronic Group|Fiber Optic Cables Duct Systems|SE_MID
+HPOL-B.ST|HEXPOL|Advanced Polymer Rubber Compounding|SE_MID
+HOFI.ST|Hoist Finance|Non-performing Loan Debt Restructuring|SE_SMALL
+HUSQ-B.ST|Husqvarna|Robotic Lawn Mowers Forestry Garden|SE_MID
+INDT.ST|Indutrade|Technical Components Industrial Niche|SE_MID
+INTRUM.ST|Intrum AB|Credit Management Debt Servicing|SE_SMALL
+JM.ST|JM AB|Nordic Residential Project Developer|SE_MID
+LAGR-B.ST|Lagercrantz Group|Electrification Niche B2B Tech|SE_MID
+LIAB.ST|Lindab International|Ventilation Indoor Climate Systems|SE_MID
+MIPS.ST|Mips AB|Helmet Rotational Brain Protection|SE_MID
+MTG-B.ST|Modern Times Group|Mobile Gaming Esports Holding|SE_SMALL
+NCC-B.ST|NCC AB|Infrastructure Asphalt Construction|SE_MID
+NEWA-B.ST|New Wave Group|Corporate Promo Sportswear Gifts|SE_MID
+NOLA-B.ST|Nolato|Medical Drug Delivery Polymer Molding|SE_MID
+PNDX-B.ST|Pandox|Hotel Property Owner Operator|SE_MID
+SKIS-B.ST|SkiStar|Alpine Ski Resorts Scandinavia|SE_SMALL
+SSAB-A.ST|SSAB|High-strength Fossil-free Steel|SE_MID
+SF.ST|Stillfront Group|Free-to-play Strategy Mobile Games|SE_SMALL
+STORY-B.ST|Storytel|Audiobook E-book Streaming Subscription|SE_SMALL
+SYSR.ST|Systemair|Industrial Ventilation Air Handling|SE_MID
+TROAX.ST|Troax Group|Indoor Steel Mesh Machine Guarding|SE_MID
+VIT-B.ST|Vitec Software Group|Vertical Market SaaS Software|SE_MID
+RBREW.CO|Royal Unibrew|Multi-beverage Brewer Soft Drinks|DK_MID
+GN.CO|GN Store Nord|Hearing Aids Jabra Enterprise Audio|DK_MID
+AMBU-B.CO|Ambu A/S|Single-use Flexible Endoscopes|DK_MID
+BAVA.CO|Bavarian Nordic|Travel Mpox Rabies Vaccines Biotech|DK_MID
+NETC.CO|Netcompany Group|GovTech Digital Platform IT Services|DK_MID
+ISS.CO|ISS A/S|Global Workplace Facility Cleaning|DK_MID
+JYSK.CO|Jyske Bank|Danish Commercial Retail Banking|DK_MID
+SYDB.CO|Sydbank|Corporate Retail Banking Denmark|DK_MID
+ALK-B.CO|ALK-Abello|Allergy Immunotherapy Tablets Drops|DK_MID
+CHEMM.CO|ChemoMetec|Automated Cell Counting Cytometry|DK_MID
+DFDS.CO|DFDS A/S|European Ferry Freight Logistics|DK_MID
+FLS.CO|FLSmidth & Co|Mining Copper Lithium Cement Engineering|DK_MID
+NKT.CO|NKT A/S|High-voltage Offshore Power Cables|DK_MID
+PAAL-B.CO|Per Aarsleff Holding|Civil Ground Trenchless Contracting|DK_MID
+RILBA.CO|Ringkjoebing Landbobank|Niche Private Business Banking|DK_MID
+SCHO.CO|Schouw & Co|Aquaculture Feed Electronics Industrial|DK_MID
+SOLAR-B.CO|Solar A/S|Electrical Heating Plumbing Sourcing|DK_SMALL
+TRMD-A.CO|TORM plc|Product Tankers Refined Oil Shipping|DK_MID
+ZEAL.CO|Zealand Pharma|Metabolic Obesity Peptide Biotech|DK_MID
+VALMT.HE|Valmet|Pulp Paper Energy Automation Process|FI_MID
+OUT1V.HE|Outokumpu|Recycled Stainless Steel Ferrochrome|FI_MID
+HUH1V.HE|Huhtamaki|Sustainable Foodservice Fiber Packaging|FI_MID
+KOJAMO.HE|Kojamo|Finnish Urban Rental Apartments REIT|FI_MID
+KEMIRA.HE|Kemira|Water Intensive Pulp Paper Chemicals|FI_MID
+METSB.HE|Metsa Board|Fresh Fiber Folding Boxboard Kraftliner|FI_MID
+CGCBV.HE|Cargotec Hiab|On-road Load Handling Cranes|FI_MID
+KCR.HE|Konecranes|Industrial Port Overhead Lifting Cranes|FI_MID
+TIETO.HE|Tietoevry|Nordic Banking Care Cloud Software|FI_MID
+TYRES.HE|Nokian Tyres|Winter Forestry Heavy Tires|FI_MID
+FSKRS.HE|Fiskars|Iconic Home Garden Outdoor Fiskars Vita|FI_MID
+HARVIA.HE|Harvia|Sauna Heaters Spa Wellness Solutions|FI_SMALL
+QTCOM.HE|Qt Group|Cross-platform Embedded GUI Software|FI_MID
+REG1V.HE|Revenio Group|Ophthalmic Tonometers Retinal Imaging|FI_SMALL
+SANOMA.HE|Sanoma|K-12 European Learning Finnish Media|FI_SMALL
+TOKMAN.HE|Tokmanni Group|Nordic Variety Discount Retailer|FI_SMALL
+VAIAS.HE|Vaisala|Weather Environmental Industrial Measurement|FI_MID
+YIT.HE|YIT Oyj|Urban Housing Infrastructure Finland|FI_SMALL
+FIA1S.HE|Finnair|Nordic Asia Network Airline|FI_SMALL
+ALMA.HE|Alma Media|Digital Marketplaces Financial News|FI_SMALL
+MEKKO.HE|Marimekko|Finnish Design Apparel Lifestyle|FI_SMALL
+OLVAS.HE|Olvi Oyj|Beer Non-alcoholic Beverages Baltic|FI_SMALL
+PONS1V.HE|Ponsse|Cut-to-length Forest Harvesters|FI_SMALL
+RAIVV.HE|Raisio|Plant-based Benecol Cholesterol Food|FI_SMALL
+BITTI.HE|Bittium|Tactical Defense Secure Communications|FI_SMALL
+SALM.OL|SalMar|Offshore Coastal Salmon Farming|NO_MID
+BAKKA.OL|Bakkafrost|Faroe Islands Scotland Premium Salmon|NO_MID
+SUBC.OL|Subsea 7|Offshore Energy Subsea Engineering|NO_MID
+TOM.OL|TOMRA Systems|Reverse Vending Sensor-based Recycling|NO_MID
+NOD.OL|Nordic Semiconductor|Ultra-low Power Bluetooth LE Wi-Fi IoT|NO_MID
+NEL.OL|Nel ASA|PEM Alkaline Water Electrolysers Hydrogen|NO_SMALL
+SCATC.OL|Scatec|Emerging Markets Solar Hydro Battery IPP|NO_MID
+BRG.OL|Borregaard|Lignin Specialty Cellulose Biovanillin|NO_MID
+STB.OL|Storebrand|NordicOccupational Pensions Asset Mgmt|NO_MID
+SCHA.OL|Schibsted Marketplaces|Nordic Classifieds Mobility Real Estate|NO_MID
+AUTO.OL|AutoStore Holdings|Cube Storage Warehouse Robotics ASRS|NO_MID
+CRAYN.OL|Crayon Group Holding|Software Asset Management AI Cloud|NO_MID
+EPR.OL|Europris|Norwegian Variety Discount Retail|NO_MID
+FRO.OL|Frontline|VLCC Suezmax Crude Oil Tankers|NO_MID
+GOGL.OL|Golden Ocean Group|Capesize Panamax Dry Bulk Shipping|NO_MID
+HAFNI.OL|Hafnia|Product Chemical Tanker Pool Operator|NO_MID
+HEX.OL|Hexagon Composites|Type 4 High-pressure CNG RNG Cylinders|NO_SMALL
+KIT.OL|Kitron|Defense Medical Industrial EMS Manufacturing|NO_SMALL
+MPCC.OL|MPC Container Ships|Intra-regional Feeder Container Vessels|NO_SMALL
+NAS.OL|Norwegian Air Shuttle|Nordic Low-cost Passenger Airline|NO_MID
+PROT.OL|Protector Forsikring|Commercial Public P&C Insurance Nordics|NO_MID
+MING.OL|SpareBank 1 SMN|Regional Central Norway Savings Bank|NO_MID
+VEI.OL|Veidekke|Scandinavian Civil Building Contractor|NO_MID
+WAWI.OL|Wallenius Wilhelmsen|RoRo Car Carrier Maritime Logistics|NO_MID

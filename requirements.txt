@@ -1,0 +1,9 @@
+aiohttp>=3.9.0
+feedparser>=6.0.0
+pydantic>=2.5.0
+pytest>=7.4.0
+pytest-asyncio>=0.23.0
+curl_cffi>=0.7.0
+flashtext>=2.7
+selectolax>=0.3.0
+aiosqlite>=0.19.0

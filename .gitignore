@@ -1,0 +1,34 @@
+# --- Bytecode Python e Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# --- Ambienti Virtuali ---
+.venv/
+venv/
+env/
+
+# --- Database SQLite e file WAL/SHM (Generati da --seed) ---
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+
+# --- Configurazione IDE (PyCharm / VSCode) ---
+.idea/
+.vscode/
+
+# --- Cartelle temporanee di scratch e dump CSV dei test live ---
+scratch/
+30-minute-test/
+2-hour-test/
+60-minutes-test/
+v1.*-struttura*.md
+struttura*.md
+log.md
+prompt_opus_interrotto.md
+# --- File di appunti e changelog locali ---
+v1.*-changes.md
+comandi_utili_sql.md

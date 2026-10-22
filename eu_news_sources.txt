@@ -1,0 +1,46 @@
+# FORMAT: SOURCE_ID|FEED_TYPE|LANGUAGE|POLL_INTERVAL_SEC|URL
+# --- 1. CORPORATE PRESS RELEASE WIRES (Zero Anti-Bot, Price-Sensitive Primari) ---
+GNW_MNA|PR_WIRE|en|45|https://www.globenewswire.com/RssFeed/subjectcode/27-Mergers%20and%20Acquisitions/feedTitle/GlobeNewswire%20-%20Mergers%20and%20Acquisitions
+GNW_EARNINGS|PR_WIRE|en|45|https://www.globenewswire.com/RssFeed/subjectcode/13-Earnings%20Releases%20and%20Operating%20Results/feedTitle/GlobeNewswire%20-%20Earnings
+GNW_CONTRACTS|PR_WIRE|en|60|https://www.globenewswire.com/RssFeed/subjectcode/11-Contracts/feedTitle/GlobeNewswire%20-%20Contracts
+GNW_DIVIDENDS|PR_WIRE|en|90|https://www.globenewswire.com/RssFeed/subjectcode/12-Dividend%20Reports%20and%20Estimates/feedTitle/GlobeNewswire%20-%20Dividends
+GNW_PUBLIC_CO|PR_WIRE|en|60|https://www.globenewswire.com/RssFeed/subjectcode/01-Public%20Companies/feedTitle/GlobeNewswire%20-%20Public%20Companies
+PRN_FINANCE|PR_WIRE|en|60|https://www.prnewswire.com/rss/financial-services-latest-news/financial-services-latest-news-list.rss
+PRN_MNA|PR_WIRE|en|60|https://www.prnewswire.com/rss/financial-services-latest-news/acquisitions-mergers-and-takeovers-list.rss
+PRN_EARNINGS|PR_WIRE|en|60|https://www.prnewswire.com/rss/financial-services-latest-news/earnings-list.rss
+PRN_CONTRACTS|PR_WIRE|en|60|https://www.prnewswire.com/rss/financial-services-latest-news/contracts-list.rss
+PRN_TECH|PR_WIRE|en|90|https://www.prnewswire.com/rss/technology-latest-news/technology-latest-news-list.rss
+PRN_HEALTH|PR_WIRE|en|90|https://www.prnewswire.com/rss/health-latest-news/health-latest-news-list.rss
+PRN_ENERGY|PR_WIRE|en|90|https://www.prnewswire.com/rss/energy-latest-news/energy-latest-news-list.rss
+
+# --- 2. EDITORIALI FINANZIARI EUROPEI E INTERNAZIONALI (Feed XML Nativi Aperti) ---
+CNBC_EUROPE|EDITORIAL|en|60|https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=19794221
+CNBC_MARKETS|EDITORIAL|en|60|https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664
+CNBC_EARNINGS|EDITORIAL|en|60|https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=15839135
+CNBC_FINANCE|EDITORIAL|en|60|https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664
+MW_TOPSTORIES|EDITORIAL|en|60|https://feeds.content.dowjones.io/public/rss/mw_topstories
+MW_MARKETPULSE|EDITORIAL|en|45|https://feeds.content.dowjones.io/public/rss/mw_marketpulse
+MW_REALTIME|EDITORIAL|en|45|https://feeds.content.dowjones.io/public/rss/mw_realtimeheadlines
+ANSA_ECONOMIA|EDITORIAL|it|60|https://www.ansa.it/sito/notizie/economia/economia_rss.xml
+ANSA_TOPNEWS|EDITORIAL|it|90|https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml
+SOLE24_FINANZA|EDITORIAL|it|60|https://www.teleborsa.it/feed/rss
+SOLE24_ECONOMIA|EDITORIAL|it|90|https://www.ilsole24ore.com/rss/economia.xml
+INVESTING_STOCK|EDITORIAL|en|60|https://www.investing.com/rss/news_25.rss
+INVESTING_ECON|EDITORIAL|en|90|https://www.investing.com/rss/news_14.rss
+EU_COMMISSION_FIN|INSTITUTIONAL|en|300|https://finance.ec.europa.eu/node/2/rss_en
+FINANZAONLINE_IT|EDITORIAL|it|60|https://www.finanzaonline.com/feed
+BOURSIER_FR|EDITORIAL|fr|60|https://www.boursier.com/syndication/rss/actualites/flash
+
+# --- 3. GOOGLE NEWS RSS SEARCH PROXIES (Aggira WAF su siti protetti con finestra 1h/1d) ---
+GNEWS_IT_BORSA|SEARCH_PROXY|it|60|https://news.google.com/rss/search?q=(%22Piazza+Affari%22+OR+%22Borsa+Italiana%22+OR+%22FTSE+Mid+Cap%22+OR+%22Euronext+STAR%22)+when:2h&hl=it&gl=IT&ceid=IT:it
+GNEWS_IT_CORP|SEARCH_PROXY|it|60|https://news.google.com/rss/search?q=(trimestrale+OR+acquisizione+OR+OPA+OR+commessa+OR+dividendo+OR+ricavi+OR+EBITDA)+(SpA+OR+quotata)+when:2h&hl=it&gl=IT&ceid=IT:it
+GNEWS_IT_SOURCES|SEARCH_PROXY|it|60|https://news.google.com/rss/search?q=(site:milanofinanza.it+OR+site:soldionline.it+OR+site:teleborsa.it+OR+site:finanzaonline.com)+when:2h&hl=it&gl=IT&ceid=IT:it
+GNEWS_DE_MDAX|SEARCH_PROXY|de|60|https://news.google.com/rss/search?q=(MDAX+OR+SDAX+OR+XETRA+OR+Ad-hoc+OR+Prognose+OR+Übernahme+OR+Quartalszahlen)+when:2h&hl=de&gl=DE&ceid=DE:de
+GNEWS_DE_EQS|SEARCH_PROXY|en|60|https://news.google.com/rss/search?q=(site:eqs-news.com+OR+site:dgap.de)+(AG+OR+SE)+when:2h&hl=en-US&gl=US&ceid=US:en
+GNEWS_FR_MID|SEARCH_PROXY|fr|60|https://news.google.com/rss/search?q=(%22Euronext+Paris%22+OR+%22CAC+Mid%22+OR+%22chiffre+d%27affaires%22+OR+acquisition+OR+Ebitda)+when:2h&hl=fr&gl=FR&ceid=FR:fr
+GNEWS_UK_RNS|SEARCH_PROXY|en|60|https://news.google.com/rss/search?q=(%22FTSE+250%22+OR+%22London+Stock+Exchange%22+OR+%22trading+update%22+OR+%22takeover+offer%22+OR+%22order+book%22)+plc+when:2h&hl=en-GB&gl=GB&ceid=GB:en
+GNEWS_EU_MNA|SEARCH_PROXY|en|60|https://news.google.com/rss/search?q=(%22takeover+offer%22+OR+%22board+unanimously%22+OR+%22acquires%22+OR+%22guidance+raised%22+OR+%22profit+warning%22)+(SpA+OR+AG+OR+SA+OR+NV+OR+plc+OR+AB)+when:2h&hl=en-US&gl=US&ceid=US:en
+GNEWS_NORDICS|SEARCH_PROXY|en|90|https://news.google.com/rss/search?q=(%22Nasdaq+Stockholm%22+OR+%22Oslo+Bors%22+OR+%22Nasdaq+Helsinki%22+OR+%22Nasdaq+Copenhagen%22)+(AB+OR+ASA+OR+Oyj)+when:2h&hl=en-US&gl=US&ceid=US:en
+GNEWS_BENELUX_ES|SEARCH_PROXY|en|90|https://news.google.com/rss/search?q=(%22Euronext+Amsterdam%22+OR+%22Euronext+Brussels%22+OR+%22Bolsa+de+Madrid%22)+(NV+OR+SA)+when:2h&hl=en-US&gl=US&ceid=US:en
+GNEWS_SWISS_AT|SEARCH_PROXY|en|90|https://news.google.com/rss/search?q=(%22SIX+Swiss+Exchange%22+OR+%22Vienna+Stock+Exchange%22)+(Holding+OR+AG)+when:2h&hl=en-US&gl=US&ceid=US:en
+GNEWS_REUTERS_EU|SEARCH_PROXY|en|60|https://news.google.com/rss/search?q=site:reuters.com+(shares+OR+stock+OR+profit+OR+buyout+OR+deal)+(Europe+OR+Milan+OR+Frankfurt+OR+Paris+OR+London)+when:2h&hl=en-US&gl=US&ceid=US:en
