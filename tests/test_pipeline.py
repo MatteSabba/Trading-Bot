@@ -336,6 +336,22 @@ class TestTextCleaner:
         result = crop_context(text, ["Interpump"], max_chars=1000, window=2)
         assert "Interpump" in result
 
+    def test_crop_context_default_max_chars_is_8000(self):
+        """Default max_chars should match MAX_CONTEXT_CHARS (8000) and preserve long text up to 8000 chars."""
+        from config.settings import MAX_CONTEXT_CHARS
+        assert MAX_CONTEXT_CHARS == 8000
+        # Text under 8000 chars (e.g. ~7000 chars) is untouched
+        text = "Interpump Group reported solid quarterly revenue growth across all units. " * 95
+        assert len(text) < 8000
+        result = crop_context(text, ["Interpump"])
+        assert result == text
+        # Text exceeding 8000 chars is cropped to at most 8000 chars
+        long_text = "Interpump Group reported solid quarterly revenue growth across all units. " * 150
+        assert len(long_text) > 8000
+        cropped = crop_context(long_text, ["Interpump"])
+        assert len(cropped) <= 8000
+        assert "Interpump" in cropped
+
 
 # ═══════════════════════════════════════════════════════════════
 # 4. RSS POLLER TESTS

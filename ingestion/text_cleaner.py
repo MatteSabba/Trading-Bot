@@ -197,7 +197,7 @@ def crop_context(
 ) -> str:
     """Progressive Budget Context Window Cropping (Head + Progressive Match Expansion + Tail).
 
-    - If len(text) <= max_chars (6000), returns 100% of the text untouched.
+    - If len(text) <= max_chars (8000), returns 100% of the text untouched.
     - If len(text) > max_chars, preserves the opening Head sentences, the closing Tail
       sentences, and progressively expands the sentence radius around match_terms
       until the available max_chars budget is densely filled (avoiding any step-cliff

@@ -29,7 +29,7 @@ ACCEPT_HEADER = "application/rss+xml, application/rdf+xml, application/atom+xml,
 ACCEPT_LANGUAGE = "en-US,en;q=0.9,it-IT;q=0.8,it;q=0.7"
 
 # ── Context Window Cropping & Freshness TTL ──
-MAX_CONTEXT_CHARS = 6000  # Expanded from 1000 to preserve fine print and deal terms
+MAX_CONTEXT_CHARS = 8000  # Expanded from 6000 to preserve fine print and deal terms
 FULL_TEXT_MIN_SUMMARY_CHARS = 1200  # Trigger full-text web extraction when RSS summary < 1200 chars
 CONTEXT_WINDOW_SENTENCES = 2  # initial sentence radius around match before progressive expansion
 MAX_NEWS_AGE_HOURS = 4  # Discard stale RSS items older than 4 hours during live ingestion

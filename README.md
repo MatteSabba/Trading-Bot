@@ -78,7 +78,7 @@ flowchart TD
         E --> F1{"Summary < 1.200 char<br/>AND Priorità <= MAX_LLM_PRIORITY?"}
         F1 -- "SI" --> F2["ArticleExtractor (ingestion/article_extractor.py)<br/>- Risoluzione Asincrona Google News RPC (batchexecute + SOCS)<br/>- Estrazione HTML Lexbor (<article>, <p>, .news-text)"]
         F1 -- "NO" --> F3["Mantiene Contesto RSS"]
-        F2 --> F4["Progressive Budget Cropping fino a 6.000 char<br/>& Riclassificazione Tassonomica sul Testo Completo"]
+        F2 --> F4["Progressive Budget Cropping fino a 8.000 char<br/>& Riclassificazione Tassonomica sul Testo Completo"]
         F3 --> F4
     end
 
@@ -175,7 +175,6 @@ trading_bot/
 ├── requirements.txt                  # Dipendenze Python del progetto
 ├── run_torture_test.py               # Runner di stress test su 16 scenari estremi di microstruttura
 ├── torture_test_news.json            # Dataset JSON dei 16 casi limite del Torture Test
-├── comandi_utili_sql.md              # Raccolta di query SQL diagnostiche per ispezionare il DB
 ├── config/
 │   └── settings.py                   # Costanti globali, dizionari multilingua, pattern anti-rumore
 ├── database/
@@ -263,7 +262,7 @@ Avvio Orchestratore Pipeline Fase 1 (Ctrl+C per terminare)...
 ```
 
 ### 8.2 Esempio di `user_prompt` Salvato in `prepared_prompts`
-Ogni prompt generato nella tabella `prepared_prompts` contiene il contesto estratto (fino a 6.000 caratteri), i guardrail di liquidità/microstruttura, l'evidenza della keyword che ha innescato il match e la fase corrente del mercato europeo:
+Ogni prompt generato nella tabella `prepared_prompts` contiene il contesto estratto (fino a 8.000 caratteri), i guardrail di liquidità/microstruttura, l'evidenza della keyword che ha innescato il match e la fase corrente del mercato europeo:
 
 ```markdown
 ## Analysis Request
@@ -278,7 +277,7 @@ Title: Guerbet : Chiffre d'affaires au 30 septembre 2026
 Published: Thu, 22 Oct 2026 15:45:00 GMT
 
 Context:
-Guerbet : Chiffre d'affaires au 30 septembre 2026. Communiqué de presse GUERBET Chiffre d'affaires au 30 septembre 2026 Une activité conforme aux anticipations du Groupe. Chiffre d'affaires au 30 septembre 2026 de 573,8 M€, en repli de 1,3% à TCC et périmètre comparable; hors Chine, une activité en croissance de 1%, avec une contribution positive des trois zones (EMEA, Amériques, Asie)... [fino a 6.000 caratteri]
+Guerbet : Chiffre d'affaires au 30 septembre 2026. Communiqué de presse GUERBET Chiffre d'affaires au 30 septembre 2026 Une activité conforme aux anticipations du Groupe. Chiffre d'affaires au 30 septembre 2026 de 573,8 M€, en repli de 1,3% à TCC et périmètre comparable; hors Chine, une activité en croissance de 1%, avec una contribution positive des trois zones (EMEA, Amériques, Asie)... [fino a 8.000 caratteri]
 
 ## Matched Assets:
 - GBT.PA: Guerbet (Sector: Medical Imaging Contrast Media, Index: FR_SMALL)
@@ -346,7 +345,7 @@ Focus on:
 
 Il progetto include due livelli di verifica automatizzata eseguibili offline:
 
-1. **Suite di 83 Unit & Integration Test (`tests/test_pipeline.py`):** Verifica lo schema SQLite WAL, il seeder, l'estrattore HTML Lexbor, il cropping progressivo a 6.000 caratteri, il `RegexEngine`, la tassonomia morfologica tedesca, la disambiguazione dei 26 broker, la deduplicazione cross-lingua con Context Upgrade e il `PromptBuilder`.
+1. **Suite di 85 Unit & Integration Test (`tests/test_pipeline.py`):** Verifica lo schema SQLite WAL, il seeder, l'estrattore HTML Lexbor, il cropping progressivo a 8.000 caratteri, il `RegexEngine`, la tassonomia morfologica tedesca, la disambiguazione dei 26 broker, la deduplicazione cross-lingua con Context Upgrade e il `PromptBuilder`.
    ```powershell
    pytest tests/test_pipeline.py -v
    ```
