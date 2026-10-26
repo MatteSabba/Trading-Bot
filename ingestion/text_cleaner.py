@@ -24,15 +24,22 @@ except ImportError:
 
 # Boilerplate suffixes to remove from titles/text
 _BOILERPLATE_PATTERNS = [
-    re.compile(r'\s*[-–—]\s*(Reuters|Bloomberg|ANSA|MilanoFinanza|Milano Finanza|Teleborsa|'
-               r'SoldiOnline|FinanzaOnline|Investing\.com|MarketWatch|CNBC|Financial Times|Handelsblatt|'
-               r'Les Echos|Il Sole 24 Ore|Borsa Italiana|Corriere della Sera|'
-               r'La Repubblica|Der Spiegel|Le Monde|The Guardian|BBC|Sky News|'
-               r'Yahoo Finance|Yahoo Finanza|Google Finance|AD HOC NEWS|'
-               r'finanzen\.at|finanzen\.ch|finanzen\.net|La Nazione|TradingView|EQS News)\s*$', re.IGNORECASE),
-    re.compile(r'\s*\|\s*(Reuters|Bloomberg|ANSA|Teleborsa|AD HOC NEWS)\s*$', re.IGNORECASE),
+    re.compile(r'\s*[-–—|]\s*(Reuters|Bloomberg|ANSA|MilanoFinanza|Milano Finanza|Teleborsa|'
+               r'SoldiOnline(?:\.it)?|FinanzaOnline|Investing\.com(?:\s+Deutsch|\s+Italia|\s+UK)?|'
+               r'MarketWatch|CNBC|Financial Times|Handelsblatt|Les Echos|Il Sole 24 Ore|'
+               r'Borsa Italiana|Corriere della Sera|La Repubblica|Der Spiegel|Le Monde|'
+               r'The Guardian|BBC|Sky News|Yahoo Finance|Yahoo Finanza|Google Finance|'
+               r'AD HOC NEWS|ad-hoc-news\.de|finanzen\.at|finanzen\.ch|finanzen\.net|'
+               r'La Nazione|TradingView|EQS News|MarketScreener(?:\s+Deutschland|\s+Schweiz|\s+Italia)?|'
+               r'Börse Express|boerse\.de|Wallstreet Online|Money\.it|Websim|Boursorama|'
+               r'Zonebourse|Boursier(?:\.com)?|Frankfurter Rundschau|MarketBeat|TipRanks|Simply Wall St)\s*$', re.IGNORECASE),
     # Trailing publisher name without dash at end of Google News description
-    re.compile(r'\s+(Teleborsa|AD HOC NEWS|finanzen\.at|finanzen\.ch|Yahoo Finanza|La Nazione|TradingView)\s*$', re.IGNORECASE),
+    re.compile(r'\s+(Teleborsa|AD HOC NEWS|ad-hoc-news\.de|finanzen\.at|finanzen\.ch|finanzen\.net|'
+               r'Yahoo Finanza|La Nazione|TradingView|SoldiOnline(?:\.it)?|Money\.it|Websim|'
+               r'Börse Express|boerse\.de|Wallstreet Online|MarketScreener(?:\s+Deutschland|\s+Schweiz)?|'
+               r'Investing\.com(?:\s+Deutsch|\s+Italia)?|Boursorama|Frankfurter Rundschau|MarketBeat)\s*$', re.IGNORECASE),
+    # Remove any residual inline domain mention of ad-hoc-news.de so it never triggers 'ad-hoc' taxonomy
+    re.compile(r'\bad-hoc-news\.de\b', re.IGNORECASE),
     # Copyright footers
     re.compile(r'\s*©.*$', re.IGNORECASE),
     re.compile(r'\s*Copyright\s+\d{4}.*$', re.IGNORECASE),
@@ -50,8 +57,15 @@ _BOILERPLATE_PATTERNS = [
 
 _TOKEN_OVERLAP_RE = re.compile(r'\b[a-zA-Z0-9À-ÿ]{3,}\b')
 
-# Sentence splitting regex (handles abbreviations reasonably)
-_SENTENCE_SPLIT = re.compile(r'(?<=[.!?])\s+(?=[A-Z\dÀ-ÿ"\'])')
+# Sentence splitting regex protecting numeric/corporate abbreviations (Mio., Mrd., Dr., ca., vs., Inc., Ltd.)
+_SENTENCE_SPLIT = re.compile(
+    r'(?<=[.!?])'
+    r'(?<!\b\d\.)(?<!\b\d{2}\.)'
+    r'(?<!\bMio\.)(?<!\bMrd\.)(?<!\bmio\.)(?<!\bmrd\.)'
+    r'(?<!\bca\.)(?<!\bvs\.)(?<!\bDr\.)(?<!\bSt\.)(?<!\bNr\.)'
+    r'(?<!\bCo\.)(?<!\bInc\.)(?<!\bLtd\.)(?<!\bcca\.)'
+    r'\s+(?=[A-Z\dÀ-ÿ"„\'])'
+)
 
 
 def strip_html(text: str) -> str:
@@ -255,7 +269,7 @@ def crop_context(
     # and from the lead until we fill at least 90% of max_chars (or exhaust all sentences)
     radius = window + 1
     max_radius = len(sentences)
-    target_fill = int(max_chars * 0.92)
+    target_fill = int(max_chars * 0.98)
 
     while len(selected_indices) < len(sentences) and radius <= max_radius:
         current_text = _build_selected_text(selected_indices)

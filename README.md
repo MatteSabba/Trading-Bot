@@ -345,7 +345,7 @@ Focus on:
 
 Il progetto include due livelli di verifica automatizzata eseguibili offline:
 
-1. **Suite di 85 Unit & Integration Test (`tests/test_pipeline.py`):** Verifica lo schema SQLite WAL, il seeder, l'estrattore HTML Lexbor, il cropping progressivo a 8.000 caratteri, il `RegexEngine`, la tassonomia morfologica tedesca, la disambiguazione dei 26 broker, la deduplicazione cross-lingua con Context Upgrade e il `PromptBuilder`.
+1. **Suite di 92 Unit & Integration Test (`tests/test_pipeline.py`):** Verifica lo schema SQLite WAL, il seeder, l'estrattore HTML Lexbor, il cropping progressivo a 8.000 caratteri, il `RegexEngine`, la tassonomia morfologica tedesca, la disambiguazione dei 26 broker, la deduplicazione cross-lingua con Context Upgrade, il declassamento dei buyback di routine e il `PromptBuilder`.
    ```powershell
    pytest tests/test_pipeline.py -v
    ```

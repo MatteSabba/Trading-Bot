@@ -29,7 +29,7 @@ ACCEPT_HEADER = "application/rss+xml, application/rdf+xml, application/atom+xml,
 ACCEPT_LANGUAGE = "en-US,en;q=0.9,it-IT;q=0.8,it;q=0.7"
 
 # ── Context Window Cropping & Freshness TTL ──
-MAX_CONTEXT_CHARS = 8000  # Expanded from 6000 to preserve fine print and deal terms
+MAX_CONTEXT_CHARS = 8000  # Expanded to 8000 to preserve full transcripts, tables and deal terms
 FULL_TEXT_MIN_SUMMARY_CHARS = 1200  # Trigger full-text web extraction when RSS summary < 1200 chars
 CONTEXT_WINDOW_SENTENCES = 2  # initial sentence radius around match before progressive expansion
 MAX_NEWS_AGE_HOURS = 4  # Discard stale RSS items older than 4 hours during live ingestion
@@ -52,13 +52,13 @@ AMBIGUOUS_SYMBOLS = {
     "HEM", "JM", "SF", "ISS", "TOM", "FRO", "NAS", "VEI", "GE",
     "SO", "MN", "CE", "AV", "EM", "UD", "FM", "ACE", "IRE", "TIP",
     "BAN", "TES", "LR", "FF", "SAX", "FIE", "HAS", "PAG", "AO",
-    "BAR", "REC",
+    "BAR", "REC", "FLOW",
 }
 
 # ── Stopwords e nomi corti ad alta collisione che devono preservare il suffisso societario ──
 AMBIGUOUS_CLEAN_NAMES = {
     "nel", "ses", "sto", "sol", "man", "air", "del", "sur",
-    "per", "con", "tra", "fra", "solar", "post", "next",
+    "per", "con", "tra", "fra", "solar", "post", "next", "iss",
     "cvs", "sig",
     "workplace", "workspace", "general", "national", "global", "first", "standard",
 }
@@ -193,19 +193,23 @@ PASSIVE_NOISE_PATTERNS = [
     r'\bform\s+8\.(?:3|5)\b',
     r'\brule\s+8\.(?:3|5)\b',
     r'\btr-1\b.*?\bnotification of major holdings\b',
+    r'\bholding\(s\)\s+in\s+company\b',
+    r'\brelease\s+according\s+to\s+article\s+40,\s*section\s+1\s+of\s+the\s+wphg\b',
     r'\btotal voting rights\b',
     r'\bdirector/pdmr\s+shareholding\b',
     r'\bministry\s+of\s+finance\s+on\s+behalf\s+of\s+the\s+state\s+of\s+norway\b',
-    r'\bwilmington,\s+delaware,\s+united\s+states\s+of\s+america\b',
-    # German (SEO retrospective return calculators - all variants)
-    r'so\s+viel\s+(?:gewinn|verlust)\s+hätte\s+ein\s+.*?investment',
-    r'so\s+viel\s+hätten\s+anleger\s+mit\s+einem\s+investment',
-    r'von\s+vor\s+\d+\s+jahren?\s+(?:eingebracht|eingefahren|abgeworfen|verloren|gewonnen)',
-    r'vor\s+einem\s+jahr\s+(?:abgeworfen|verloren|gewonnen)',
+    r'\bwilmington,\s+(?:delaware|de),\s+united\s+states\s+of\s+america\b',
+    # German (SEO retrospective return calculators - all variants including Investition/bedeutet/angefallen)
+    r'so\s+viel\s+(?:gewinn|verlust)\s+(?:hätte|wäre)\s+(?:ein|eine|bei\s+einem)\s+.*?(?:investment|investition)',
+    r'so\s+viel\s+hätten\s+anleger\s+mit\s+(?:einem\s+investment|einer\s+investition)',
+    r'von\s+vor\s+\d+\s+jahren?\s+(?:eingebracht|eingefahren|abgeworfen|verloren|gewonnen|bedeutet|angefallen)',
+    r'vor\s+(?:einem|\d+)\s+jahren?\s+(?:abgeworfen|verloren|gewonnen|bedeutet|angefallen)',
     # German & Multilingual automated technical chart / price-level noise before earnings
     r'\bliegt\s+\d+[,.]?\d*\s*(?:prozent|%)\s+unter\s+(?:dem\s+)?(?:jahreshoch|allzeithoch|52-wochen-hoch)\b',
     r'\b(?:notiert|kostet|fällt|steigt|legt)\s+.*?\bvor\s+(?:den\s+|dem\s+)?(?:quartalszahlen|geschäftszahlen|zahlen|quartalsbericht|bericht\s+zum)\b',
     r'\bvor\s+(?:den\s+|dem\s+)?(?:quartalszahlen|quartalsbericht)\s+(?:im\s+fokus|unter\s+druck|leichter|fester)\b',
+    r'\bsorgt\s+derzeit\s+für\s+gesprächsstoff\s+an\s+der\s+börse\b',
+    r'\bstehen\s+vor\s+einer\s+richtungsweisenden\s+woche\b',
     r'\b(?:scambia|costa|cede|sale)\s+.*?\bprima\s+dei\s+(?:conti|risultati\s+trimestrali)\b',
     # English (SEO retrospective return calculators)
     r'if\s+you\s+had\s+invested\s+.*?\s+years?\s+ago',
@@ -272,10 +276,13 @@ FINANCIAL_INTERMEDIARY_TICKERS = {
 
 # Patterns indicating the intermediary is ISSUING a rating/recommendation on a third party
 ANALYST_ISSUER_ACTION_PATTERNS = [
-    # Italian (supports "alza target price", "abbassa target price", "riduce target price", etc.)
+    # Italian (supports "alza target price", "abbassa target price", "upgrade a Buy da Equita", etc.)
     r'(?:alza|alzano|taglia|tagliano|abbassa|abbassano|riduce|riducono|incrementa|ritocca)\s+(?:il\s+)?target\s+price',
     r'target\s+price\s+(?:a|pari\s+a)\s+\d+[,.]?\d*\s*euro',
-    r'conferma\s+(?:il\s+giudizio\s+)?(?:buy|hold|neutral|outperform|sell|underperform)',
+    r'conferma\s+(?:il\s+giudizio\s+|il\s+)?(?:buy|hold|neutral|outperform|sell|underperform)',
+    r'\b(?:upgrade|downgrade)\s+(?:a\s+(?:buy|outperform|overweight|hold|neutral|sell|underperform)\s+)?(?:da|di)\b',
+    r'\bmigliorato\s+a\s+["\'«“]?(?:buy|outperform|hold|neutral)',
+    r'\b(?:equita|mediobanca|intermonte|banca\s+akros|kepler)\s+vede\b',
     r'promozione\s+di',
     r'avvia\s+(?:la\s+)?copertura',
     r'secondo\s+gli\s+analisti\s+di',
@@ -330,4 +337,17 @@ ROUTINE_SHORT_DISCLOSURE_PATTERNS = [
     r'\b(?:riduce|aumenta|lima|taglia|incrementa)\s+(?:lo\s+)?short\b',
     r'\bposizioni\s+short\b',
     r'\bshort\s+interest\b',
+]
+
+# 4. Routine weekly treasury share buyback disclosures (downgrade to GENERAL P3 & flag in PromptBuilder)
+ROUTINE_BUYBACK_PATTERNS = [
+    r'comunicazione\s+in\s+merito\s+all[\'’]acquisto\s+di\s+azioni\s+proprie',
+    r'informativa\s+sull[\'’]acquisto\s+di\s+azioni\s+proprie',
+    r'riepilogo\s+settimanale\s+azioni\s+proprie',
+    r'transaction[s]?\s+in\s+own\s+shares',
+    r'\b(?:rilevate|acquistate|acquista)\s+[\d.,]+\s+azioni\s+(?:ordinarie\s+)?(?:proprie|nel\s+buyback)\b',
+    r'\bporta\s+al\s+\d+[,.]\d+%\s+la\s+quota\s+di\s+azioni\s+proprie\b',
+    r'\bnell[\'’]ambito\s+del\s+programma\s+di\s+(?:acquisto\s+di\s+azioni\s+proprie|buyback)\b',
+    r'\bcontinues\s+buybacks?,\s+acquires\s+[\d.,]+\s+treasury\s+shares\b',
+    r'\brepurchases\s+of\s+shares\s+by\b.*?\bduring\s+week\s+\d+\b',
 ]

@@ -16,7 +16,7 @@ import re
 from datetime import datetime, timezone
 from typing import List, Optional
 
-from config.settings import STALE_NEWS_MINUTES_THRESHOLD
+from config.settings import ROUTINE_BUYBACK_PATTERNS, STALE_NEWS_MINUTES_THRESHOLD
 from database.db_manager import DatabaseManager
 from ingestion.rss_poller import parse_rss_datetime
 from models.schemas import FilteredNewsItem, PreparedPromptPayload
@@ -43,12 +43,7 @@ _RETROSPECTIVE_SPIKE_REGEX = re.compile(
 
 # Routine weekly treasury share buyback disclosure detector (administrative noise on IT_STAR / EU)
 _ROUTINE_BUYBACK_REGEX = re.compile(
-    r'(?:'
-    r'comunicazione\s+in\s+merito\s+all[\'’]acquisto\s+di\s+azioni\s+proprie'
-    r'|informativa\s+sull[\'’]acquisto\s+di\s+azioni\s+proprie'
-    r'|riepilogo\s+settimanale\s+azioni\s+proprie'
-    r'|transaction[s]?\s+in\s+own\s+shares'
-    r')',
+    r'(?:' + '|'.join(ROUTINE_BUYBACK_PATTERNS) + r')',
     re.IGNORECASE,
 )
 

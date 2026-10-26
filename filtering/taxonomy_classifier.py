@@ -14,6 +14,7 @@ from database.db_manager import DatabaseManager
 from config.settings import (
     BOARD_CONTRACT_EXCLUSION_PATTERNS,
     CALENDAR_INVITATION_PATTERNS,
+    ROUTINE_BUYBACK_PATTERNS,
     ROUTINE_SHORT_DISCLOSURE_PATTERNS,
 )
 
@@ -57,10 +58,12 @@ _TAXONOMY: List[Tuple[str, Set[str], int]] = [
         {
             # English
             "q1", "q2", "q3", "q4", "h1", "fy", "ebitda", "ebit", "earnings",
-            "net profit", "net income", "revenue", "revenues", "sales", "quarterly sales",
-            "nine-month sales", "full-year sales", "organic growth", "dividend", "dividends",
+            "net profit", "net income", "revenue", "revenues", "quarterly sales",
+            "nine-month sales", "full-year sales", "annual sales", "lower sales", "higher sales",
+            "sales growth", "sales rose", "sales fell", "organic growth", "dividend", "dividends",
             "margin", "margins", "guidance", "outlook", "profit warning", "trading update",
-            "preliminary results", "ad-hoc", "eqs-adhoc", "share buyback", "share repurchase",
+            "preliminary results", "eqs-adhoc", "eqs-ad-hoc", "ad-hoc-mitteilung",
+            "ad-hoc announcement", "share buyback", "share repurchase",
             # Italian
             "trimestrale", "trimestrali", "semestrale", "semestrali", "bilancio", "risultati",
             "utile", "utili", "utile netto", "ricavi", "fatturato", "dividendo", "dividendi",
@@ -70,6 +73,8 @@ _TAXONOMY: List[Tuple[str, Set[str], int]] = [
             "umsatz", "konzernumsatz", "erlöse", "gewinnwarnung", "umsatzwarnung",
             # French
             "résultats", "chiffres provisoires", "dividende", "chiffre d'affaires",
+            "prévision", "prévisions", "relèvement de prévision", "relève ses prévisions",
+            "abaisse ses prévisions",
             # Spanish
             "resultados", "beneficio", "beneficios", "ingresos", "dividendo", "dividendos",
         },
@@ -83,6 +88,7 @@ _TAXONOMY: List[Tuple[str, Set[str], int]] = [
             "orders", "backlog", "awarded", "tender",
             # Italian
             "commessa", "commesse", "contratto", "contratti", "appalto", "appalti", "aggiudica",
+            "ordine", "ordini", "nuovo ordine", "nuovi ordini", "portafoglio ordini",
             # German
             "auftrag", "aufträge", "großauftrag",
             # French
@@ -97,7 +103,8 @@ _TAXONOMY: List[Tuple[str, Set[str], int]] = [
         {
             # English
             "ema", "fda", "antitrust", "patent", "patents", "approval", "approvals",
-            "investigation", "investigations", "fine", "fines", "penalty", "golden power",
+            "investigation", "investigations", "fines", "fined", "regulatory fine",
+            "antitrust fine", "heavy fine", "penalty", "golden power",
             # Italian
             "consob", "multa", "multe", "brevetto", "brevetti", "indagine", "indagini",
             "sanzione", "sanzioni",
@@ -139,7 +146,7 @@ _TAXONOMY: List[Tuple[str, Set[str], int]] = [
 
 # High-severity regulatory enforcement terms that override weak M&A/General matches
 _HARD_REGULATORY_TERMS = re.compile(
-    r'\b(?:antitrust|investigation|indagine|consob|bafin|amf|multa|fine|sanzione|golden\s+power)\b',
+    r'\b(?:antitrust|investigation|indagine|consob|bafin|amf|multa|fines|fined|regulatory\s+fine|antitrust\s+fine|sanzione|golden\s+power)\b',
     re.IGNORECASE,
 )
 
@@ -155,6 +162,17 @@ _CALENDAR_INVITATION_RE = re.compile(
 
 _ROUTINE_SHORT_DISCLOSURE_RE = re.compile(
     r'(?:' + '|'.join(ROUTINE_SHORT_DISCLOSURE_PATTERNS) + r')',
+    re.IGNORECASE,
+)
+
+_ROUTINE_BUYBACK_DISCLOSURE_RE = re.compile(
+    r'(?:' + '|'.join(ROUTINE_BUYBACK_PATTERNS) + r')',
+    re.IGNORECASE,
+)
+
+# Generic market wrap headlines (e.g., "Borsa: Milano in rialzo...", "Borsa: l'Europa...")
+_MARKET_WRAP_HEADLINE_RE = re.compile(
+    r'^\s*borsa\s*:\s*(?:milano|l[\'’]europa|europa|wall\s+street|tokyo|asia|cambi)\b',
     re.IGNORECASE,
 )
 
@@ -253,6 +271,15 @@ class TaxonomyClassifier:
                 # Guard 3: Routine Consob/EU short-selling (PNC) daily position updates are GENERAL (Prio 3),
                 # not REGULATORY_LEGAL enforcement/investigations
                 if cat_name == "REGULATORY_LEGAL" and _ROUTINE_SHORT_DISCLOSURE_RE.search(scoring_text):
+                    continue
+
+                # Guard 4: Routine weekly treasury share buyback disclosures are administrative GENERAL (Prio 3),
+                # not primary M&A or Earnings catalysts
+                if cat_name in ("M&A_CORPORATE", "EARNINGS_GUIDANCE") and _ROUTINE_BUYBACK_DISCLOSURE_RE.search(scoring_text):
+                    continue
+
+                # Guard 5: Generic market wrap headlines ("Borsa: Milano...", "Borsa: l'Europa...") are GENERAL (Prio 3)
+                if cat_name in ("M&A_CORPORATE", "EARNINGS_GUIDANCE") and _MARKET_WRAP_HEADLINE_RE.search(incipit):
                     continue
 
                 unique_matches = set(all_matches)

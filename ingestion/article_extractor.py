@@ -68,6 +68,7 @@ _INLINE_JUNK_PARAGRAPH_RE = re.compile(
     r'Sarai\s+automaticamente\s+diretto\s+al\s+link\s+in\s+cinque\s+secondi)',
     re.IGNORECASE,
 )
+_INTERSTITIAL_DISCLAIMER_RE = _INLINE_JUNK_PARAGRAPH_RE
 
 # Semantic article body selectors in priority order
 _ARTICLE_SELECTORS = [
@@ -75,6 +76,10 @@ _ARTICLE_SELECTORS = [
     '[itemprop="articleBody"]',
     '.news-text',
     '.article-text',
+    '.news-body',
+    '#tlb-news-content',
+    '.detail-text',
+    '.corpo-articolo',
     '[role="main"]',
     'main',
     '.article-body',
@@ -173,38 +178,35 @@ def _extract_text_from_html(html_content: str) -> str:
                     nodes = tree.css(selector)
                     if nodes:
                         container = nodes[0]
-                        paragraphs = container.css('p')
-                        p_result = ""
+                        paragraphs = container.css('p, li')
                         if paragraphs:
                             texts = []
                             for p in paragraphs:
                                 p_text = p.text(separator=' ').strip()
-                                if len(p_text) > 30 and not _INLINE_JUNK_PARAGRAPH_RE.search(p_text):
+                                min_len = 20 if p.tag == 'li' else 30
+                                if len(p_text) > min_len and not _INTERSTITIAL_DISCLAIMER_RE.search(p_text):
                                     texts.append(p_text)
                             if texts:
-                                p_result = re.sub(r'\s+', ' ', ' '.join(texts)).strip()
-
-                        # Also inspect direct container text for sites (like Zonebourse or Teleborsa)
-                        # that place the main body outside <p> tags
+                                result = re.sub(r'\s+', ' ', ' '.join(texts)).strip()
+                                if len(result) >= _MIN_EXTRACTED_CHARS:
+                                    return result
+                        # Fallback for publishers (like Teleborsa) that place article text directly inside container divs/spans
                         direct_text = re.sub(r'\s+', ' ', container.text(separator=' ').strip())
-                        direct_text = _INLINE_JUNK_PARAGRAPH_RE.sub(' ', direct_text)
-                        direct_text = re.sub(r'\s+', ' ', direct_text).strip()
-
-                        if len(p_result) >= 500:
-                            return p_result
-                        if len(direct_text) >= max(_MIN_EXTRACTED_CHARS, len(p_result) + 200):
+                        if (
+                            len(direct_text) >= _MIN_EXTRACTED_CHARS
+                            and not _INTERSTITIAL_DISCLAIMER_RE.search(direct_text)
+                        ):
                             return direct_text
-                        if len(p_result) >= _MIN_EXTRACTED_CHARS:
-                            return p_result
                 except Exception:
                     continue
 
-            all_p = tree.css('p')
+            all_p = tree.css('p, li')
             if all_p:
                 texts = []
                 for p in all_p:
                     p_text = p.text(separator=' ').strip()
-                    if len(p_text) > 30 and not _INLINE_JUNK_PARAGRAPH_RE.search(p_text):
+                    min_len = 20 if p.tag == 'li' else 30
+                    if len(p_text) > min_len and not _INTERSTITIAL_DISCLAIMER_RE.search(p_text):
                         texts.append(p_text)
                 if texts:
                     result = re.sub(r'\s+', ' ', ' '.join(texts)).strip()

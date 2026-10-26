@@ -1354,3 +1354,107 @@ class TestPhase5TwoHourLiveTestHardening:
         assert engine.match("(CVS) | Stock Price & Latest News") == []
 
 
+# ═══════════════════════════════════════════════════════════════
+# 14. PHASE 6 SIX-HOUR LIVE TEST HARDENING (v1.5.1)
+# ═══════════════════════════════════════════════════════════════
+
+class TestPhase6SixHourLiveTestHardening:
+    """Tests for v1.5.1 fixes from the 6.5-hour live test (117 articles audit):
+    - 'ad-hoc-news.de' domain stripped & excluded from triggering EARNINGS_GUIDANCE P1
+    - Italian 'entro fine anno' excluded from triggering English 'fine' in REGULATORY_LEGAL P2
+    - Italian 'Nuovi ordini' (Cy4Gate) and French 'relèvement de prévision' (Computacenter) classified in P2/P1
+    - 'HEDGE FLOW' (FLOW.AS) and 'ISS Securities Class Action' (ISS.CO) false positives blocked
+    - Routine buyback variations downgraded to GENERAL (Priority 3) while keeping guardrail
+    - Sentence splitter preserves German '762 Mio. EUR' and '1.2 Mrd. EUR' without splitting at 'Mio.'
+    - HTML extractor captures <li> bullet points alongside <p> paragraphs
+    """
+
+    def test_ad_hoc_news_de_domain_does_not_trigger_earnings_p1(self, seeded_db):
+        """Articles from 'ad-hoc-news.de' must not trigger EARNINGS_GUIDANCE via domain name."""
+        classifier = TaxonomyClassifier(db=seeded_db)
+        cleaned_title = clean_text(
+            "Deutsche Lufthansa: Flugausfälle nach Nahost-Eskalation - ad-hoc-news.de"
+        )
+        assert "ad-hoc-news.de" not in cleaned_title.lower()
+        cat, prio = classifier.classify(cleaned_title, ["LHA.DE"])
+        assert cat == "GENERAL"
+        assert prio == 3
+
+    def test_italian_fine_anno_does_not_trigger_regulatory_fine(self, seeded_db):
+        """Italian 'entro fine anno' (#4 Credem) must not match English 'fine' (penalty)."""
+        classifier = TaxonomyClassifier(db=seeded_db)
+        text = (
+            "Credem: oltre 380 assunzioni previste nel 2026. Il gruppo bancario "
+            "punta ad altre 100 assunzioni entro fine anno."
+        )
+        cat, prio = classifier.classify(text, ["CE.MI"])
+        assert cat == "GENERAL"
+        assert prio == 3
+
+    def test_cy4gate_nuovi_ordini_and_french_prevision_classified(self, seeded_db):
+        """Italian 'Nuovi ordini' (#10 Cy4Gate) -> CONTRACT_ORDER (P2) and French 'relèvement de prévision' (#91) -> EARNINGS_GUIDANCE (P1)."""
+        classifier = TaxonomyClassifier(db=seeded_db)
+
+        cat_it, prio_it = classifier.classify(
+            "Cy4Gate - Nuovi ordini per 5,4 milioni, visibilità rafforzata", ["CY4.MI"]
+        )
+        assert cat_it == "CONTRACT_ORDER"
+        assert prio_it == 2
+
+        cat_fr, prio_fr = classifier.classify(
+            "Computacenter s'envole grâce à son relèvement de prévision", ["CCC.L"]
+        )
+        assert cat_fr == "EARNINGS_GUIDANCE"
+        assert prio_fr == 1
+
+    def test_hedge_flow_and_iss_securities_false_positives_blocked(self, seeded_db):
+        """'HEDGE FLOW' (#39 FLOW.AS) and '2025 ISS Securities Class Action' (#75 ISS.CO) must not match."""
+        engine = RegexEngine(db=seeded_db)
+        engine.load_rules()
+
+        assert engine.match("HEDGE FLOW-Trend hedge funds saw worst week since 2008 as peace hopes rose") == []
+        assert engine.match("2025 ISS Securities Class Action Services Report Names Top Plaintiff Law Firms") == []
+
+    def test_routine_buyback_variants_downgraded_to_general_p3(self, seeded_db):
+        """Weekly treasury share purchase summaries (#95, #97, #100, #116) must downgrade to GENERAL P3."""
+        classifier = TaxonomyClassifier(db=seeded_db)
+
+        for text, ticker in [
+            ("Tamburi, rilevate 109.169 azioni proprie tra il 20 e il 24 ottobre", "TIP.MI"),
+            ("BasicNet porta al 16,665% la quota di azioni proprie", "BAN.MI"),
+            ("OVS, acquistate 265.436 azioni ordinarie nel buyback", "OVS.MI"),
+        ]:
+            cat, prio = classifier.classify(text, [ticker])
+            assert cat == "GENERAL"
+            assert prio == 3
+
+    def test_sentence_splitter_preserves_german_mio_and_mrd_eur(self):
+        """split_sentences must not break '762 Mio. EUR' or '1,5 Mrd. EUR' across two sentences."""
+        text = (
+            "PostNL wies im 3. Quartal einen Umsatz von 768 Mio. EUR aus, nach 762 Mio. EUR im Vorjahreszeitraum. "
+            "Die Planungen für Investitionen in Höhe von rund 125 Mio. EUR behielt das Unternehmen bei."
+        )
+        sentences = split_sentences(text)
+        assert len(sentences) == 2
+        assert "762 Mio. EUR im Vorjahreszeitraum." in sentences[0]
+        assert "125 Mio. EUR behielt" in sentences[1]
+
+    def test_html_extractor_captures_bullet_points_li(self):
+        """_extract_text_from_html must extract <li> KPI bullet points inside <article>."""
+        from ingestion.article_extractor import _extract_text_from_html
+
+        html_doc = """
+        <html><body><article>
+            <p>PostNL published its third quarter 2026 interim financial results ahead of consensus expectations.</p>
+            <ul>
+                <li>E-Commerce revenue rose 2.6% to 478 Mio. EUR in Q3 2026</li>
+                <li>Free cash flow guidance upgraded to break-even for full year 2026</li>
+            </ul>
+            <p>Management confirmed full-year normalized EBIT guidance between 40 and 70 Mio. EUR.</p>
+        </article></body></html>
+        """
+        extracted = _extract_text_from_html(html_doc)
+        assert "478 Mio. EUR" in extracted
+        assert "Free cash flow guidance upgraded" in extracted
+
+
